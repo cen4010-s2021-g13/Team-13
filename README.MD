@@ -5,3 +5,6 @@
 Branch names must follow this format: [name]/[main theme of branch]
 
 Luiz
+
+## Milestone 0 - GitHub Checklist
+- [ ] Has everyone interacted with the repo
