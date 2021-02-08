@@ -3,3 +3,5 @@
 ## Git Etiquette
 
 Branch names must follow this format: [name]/[main theme of branch]
+
+Luiz
