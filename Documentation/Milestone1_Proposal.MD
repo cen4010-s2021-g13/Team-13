@@ -14,6 +14,7 @@ Version 0.00 - 2/12/21 - Added template
 Version 0.01 - 2/15/21 - Added executive summary
 Version 0.02 - 2/15/21 - Added competitive analysis
 Version 0.03 - 2/16/21 - Added High-Level System Architecture and Team
+Version 0.04 - 2/16/21 - Added Non-functional Requirements
 
 ## Executive Summary
 Team 13 will be making a project aimed at connecting during social distancing through the use of a multiplayer game. The game will be playable in a browser and users will be able to choose who they connect to. The system for allowing users to find each other will be a short randomized code, which can be shared using outside means like text or video communications. Players can maintain privacy by only sharing their code with people they choose. Only the usernames of players will be shared with other players, and all other information will be kept private. 
@@ -44,6 +45,16 @@ One of the major competitors that came to mind when coming up with our idea was 
 ## High-level Functional Requirements
 
 ## Non-functional Requirements
+1. Graphics
+   * The game needs to run with a framerate of at least 30fps on average. The optimal framerate range is between 30fps and 60fps.
+2. Client Resources
+   * The game needs to be lightweight and be able to run with a minimum of 1024MB of memory.
+3. Server Resources
+   * The server instance needs to 
+5. Netcode
+   * The response time between the client and server needs to be lower than 100ms
+
+
 
 ## High-Level System Architecture
 
