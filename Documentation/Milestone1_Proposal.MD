@@ -39,9 +39,12 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **Unity**: American video game software development company
 
-**Frame Rate**: The frequency of images (called frames) being displayed on the screen. Measured in frames per second (fps).
+**OS**: The operational system
 
-**Netcode**: The syncronization between the client and server side of the game. Done with packets
+**Frame Rate**: The frequency of images (called frames) being displayed on the screen. Measured in frames per second (fps)
+
+**Netcode**: The syncronization between the client and server side of the game.
+
 ## Overview, scenarios and use cases
 
 ## High-level Functional Requirements
@@ -49,15 +52,17 @@ One of the major competitors that came to mind when coming up with our idea was 
 ## Non-functional Requirements
 1. Graphics performance
    * The game needs to run with a frame rate of at least 30fps on average. The optimal frame rate range is between 30fps and 60fps.
-1. Client Storage
+1. a
+   * a
+1. Response time
+   * The game needs a near realtime response on average for the inputs of less than 30ms.
+1. Client Resources
+   * The game will run on a webpage so that it can be accessed by any OS.
    * The game needs to be lightweight with no more than 300MB of size.
-1. Client Memory
    * The game needs to be able to run with a minimum of 1024MB of memory.
-1. Server Platform
+1. Server Resources
    * The server needs to run the OS Windows 10
-1. Server Storage
    * The sever instance needs to have less than 1024MB of size.
-1. Server Memory
    * The server instance needs to run with a minimum of 2048MB of memory.
 1. Netcode
    * The response time between the client and server needs to be on average below 60ms.
