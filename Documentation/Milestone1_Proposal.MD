@@ -45,6 +45,8 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **Netcode**: The syncronization between the client and server side of the game.
 
+**Bugs or Glitches**: Issues or problems that happen when the game do things that it was not supposed to.
+
 ## Overview, scenarios and use cases
 
 ## High-level Functional Requirements
@@ -52,8 +54,8 @@ One of the major competitors that came to mind when coming up with our idea was 
 ## Non-functional Requirements
 1. Graphics performance
    * The game needs to run with a frame rate of at least 30fps on average. The optimal frame rate range is between 30fps and 60fps.
-1. a
-   * a
+1. Ease of use
+   * The game and the game menu needs to be easy 
 1. Response time
    * The game needs a near realtime response on average for the inputs of less than 30ms.
 1. Client Resources
