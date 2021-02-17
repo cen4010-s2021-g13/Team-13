@@ -53,6 +53,8 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **Bugs or Glitches**: Issues or problems that happen when the game do things that it was not supposed to do.
 
+**Player**: User playing the game.
+
 ## Overview, scenarios and use cases
 1. Overview
    * The application is a user-end multiplayer browser-based game written primarily in C#, using the Unity Game Development engine.
