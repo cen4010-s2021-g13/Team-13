@@ -22,7 +22,7 @@ Version 0.04 - 2/16/21 - Added Non-functional Requirements, Data Definition
 
 Version 0.05 - 2/16/21 - Added Overview, scenarios and use cases
 
-Version 0.06 - 2/16/21 - High-level Functional Requirements
+Version 0.06 - 2/16/21 - Added High-level Functional Requirements
 
 ## Executive Summary
 Team 13 will be making a project aimed at connecting during social distancing through the use of a multiplayer game. The game will be playable in a browser and users will be able to choose who they connect to. The system for allowing users to find each other will be a short randomized code, which can be shared using outside means like text or video communications. Players can maintain privacy by only sharing their code with people they choose. Only the usernames of players will be shared with other players, and all other information will be kept private. 
