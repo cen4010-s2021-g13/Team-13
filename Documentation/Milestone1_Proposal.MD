@@ -52,6 +52,18 @@ One of the major competitors that came to mind when coming up with our idea was 
 **Bugs or Glitches**: Issues or problems that happen when the game do things that it was not supposed to do.
 
 ## Overview, scenarios and use cases
+1. Overview
+   * The application is a user-end multiplayer browser-based game written primarily in C#, using the Unity Game Development engine.
+3. Accessibility
+   * The application should be accessible by any user, administrative or not, through any web browser using standard Hypertext Transfer protocol. The application should function as an excecutable on any system capable of running Windows 10, provided said system operates with a minimum of 8 gigabytes of DDR4 RAM and a dual-core Intel Core-i3 processor (or equivalent).
+4. Scenarios
+   * The application should be accessed via Google Chrome or Mozilla Firefox and each instance of it should be terminable from either browser, respectively. Any given instance of use of said application should be terminable upon no more than half an hour of execution, and each instance should occupy no more than approximately 3 MB of the system's L1 cache. 
+5. Use Cases
+   * A given instance of the application's use should be as follows:
+   * The user logs in via standard hypertext transfer protocol.
+   * The server should respond accordingly, and with ideal performance, the server should operate with a ping of approximately 100 ms or less.
+   * The server will accommodate up to four users in any given instance of the application.
+   * An instance of the game will terminate when all users log out of the application and the connection to the server is terminated.
 
 ## High-level Functional Requirements
 
