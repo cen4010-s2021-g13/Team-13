@@ -11,9 +11,13 @@
 # 02/12/2020
 # History Table
 Version 0.00 - 2/12/21 - Added template
+
 Version 0.01 - 2/15/21 - Added executive summary
+
 Version 0.02 - 2/15/21 - Added competitive analysis
+
 Version 0.03 - 2/16/21 - Added High-Level System Architecture and Team
+
 Version 0.04 - 2/16/21 - Added Non-functional Requirements
 
 ## Executive Summary
@@ -31,7 +35,7 @@ Key Features: Competitor vs Team 13
 |Winner Take all|	Point System|
 |Customizable Avatars|	Customizable Avatars|
 
-One of the major competitors that came to mind when coming up with our idea was the fame Fall Guys. When people think of online obstacle game, the think of Fall Guys. The first key difference will be how the multiplayer works. Fall Guys requires around a 50-person lobby which means there is no way to play solely with your friends. Our idea is to use a code invite system and have the games on a smaller scale so that games can take place between friends. Fall Guys takes place in a 3D environment, while our game will be in 2D. In this day and age, a games success has little to do with the dimensions of the game and more to do with how it makes use of the space. Only being in 2D will allow us to spend more time making the physics work well and give the user more control over their avatar. Our game will be using a side-view perspective which will allow the user to have precise control over the two dimensions they can move in. Fall Guys’ movement is much less focused on precision and more on situational awareness which allows are game to fill a difference niche. The point system between the two games will also be different. Fall Guys utilizes a winner take all when it comes to receiving rewards from playing. Our game will have a point system that will allow even those who come in second or third to earn rewards and have a sense of progression. Finally, you need a way to spend these points and this is where the two games will behave the same. The points players earn through their accomplishments will be used to buy customizable items to personalizer their avatars.
+One of the major competitors that came to mind when coming up with our idea was the fame Fall Guys. When people think of online obstacle game, they think of Fall Guys. The first key difference will be how the multiplayer works. Fall Guys requires around a 50-person lobby which means there is no way to play solely with your friends. Our idea is to use a code invite system and have the games on a smaller scale so that games can take place between friends. Fall Guys takes place in a 3D environment, while our game will be in 2D. In this day and age, a games success has little to do with the dimensions of the game and more to do with how it makes use of the space. Only being in 2D will allow us to spend more time making the physics work well and give the user more control over their avatar. Our game will be using a side-view perspective which will allow the user to have precise control over the two dimensions they can move in. Fall Guys’ movement is much less focused on precision and more on situational awareness which allows are game to fill a difference niche. The point system between the two games will also be different. Fall Guys utilizes a winner take all when it comes to receiving rewards from playing. Our game will have a point system that will allow even those who come in second or third to earn rewards and have a sense of progression. Finally, you need a way to spend these points and this is where the two games will behave the same. The points players earn through their accomplishments will be used to buy customizable items to personalizer their avatars.
 
 ## Data Definition
 
@@ -45,7 +49,7 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **Netcode**: The syncronization between the client and server side of the game.
 
-**Bugs or Glitches**: Issues or problems that happen when the game do things that it was not supposed to.
+**Bugs or Glitches**: Issues or problems that happen when the game do things that it was not supposed to do.
 
 ## Overview, scenarios and use cases
 
@@ -55,7 +59,7 @@ One of the major competitors that came to mind when coming up with our idea was 
 1. Graphics performance
    * The game needs to run with a frame rate of at least 30fps on average. The optimal frame rate range is between 30fps and 60fps.
 1. Ease of use
-   * The game and the game menu needs to be easy 
+   * The game and the game menu needs to be simple to use.
 1. Response time
    * The game needs a near realtime response on average for the inputs of less than 30ms.
 1. Client Resources
@@ -92,15 +96,13 @@ https://www.khronos.org/vulkan/
 * Last.fm API: Allows the exploring of the entire collection of the website’s music data resources, such as artists and playlists.
 https://english.api.rakuten.net/dimashirokov/api/LastFm
 
-
 ### Supported Browsers
 * Google Chrome
 * Firefox
 
-
 ### GUI
 
-Unity  for developing a 2-D game 
+Unity for developing a 2-D game 
 https://docs.unity3d.com/Manual/Unity2D.html
 
 
