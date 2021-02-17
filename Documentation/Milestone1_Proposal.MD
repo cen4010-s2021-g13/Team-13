@@ -72,6 +72,22 @@ One of the major competitors that came to mind when coming up with our idea was 
    * An instance of the game will terminate when all users log out of the application and the connection to the server is terminated.
 
 ## High-level Functional Requirements
+1. Platform user interface will display in English.
+1. Mobil page design and desktop experience.
+1. Multiplatform game supported by PC, Web player, android, IOS and other platforms
+1. Back-end programming
+1. Game encourages creativity and daring via branching
+1. The episodic structure facilitates the pace of the story
+1. Flow between different inputs, script, display (outputs)
+1. Story, levels, objects, animation, graphics, script, game engine facilities
+1. Software requirements specifications includes the action flow, initial user interface.
+1. Navigation between different front-ends menus
+1. System environment gamer can interact with system by giving input (press keys)
+1. System gives inputs to script, if any changes occur(if values are changed
+1. Keypad/gamepad, script (compile), renders (display)
+1. After running game UX will appear on the screen.
+1. Use cases based on UX view.
+1. A story provides understanding of the game objective and to finish the stage.
 
 ## Non-functional Requirements
 1. Graphics performance
