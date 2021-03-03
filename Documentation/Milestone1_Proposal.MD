@@ -47,7 +47,7 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **LAMP Server**: Linux Apache MySQL PHP [LAMP] server, provided by FAU, provides access to Linux (via SSH access) ), Apache (for web based development via PHP or CGI-BIN), MySQL (for database development), PHP (for web based development, and Tomcat (for java based web development).
 
-**Unity**: American video game software development company
+**Unity**: American video game software development company used for the development of the game.
 
 **OS**: The operational system
 
@@ -126,8 +126,6 @@ Use our group’s LAMP server provided by the university.
 * Server-side: PHP
 
 ### API’s
-* Vulkan API: Graphics API developed by Khronos
-https://www.khronos.org/vulkan/
 
 * Last.fm API: Allows the exploring of the entire collection of the website’s music data resources, such as artists and playlists.
 https://english.api.rakuten.net/dimashirokov/api/LastFm
@@ -137,6 +135,11 @@ https://english.api.rakuten.net/dimashirokov/api/LastFm
 * Firefox
 
 ### GUI
+
+Unity for developing a 2-D game 
+https://docs.unity3d.com/Manual/Unity2D.html
+
+### Development
 
 Unity for developing a 2-D game 
 https://docs.unity3d.com/Manual/Unity2D.html
