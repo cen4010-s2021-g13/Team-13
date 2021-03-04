@@ -74,22 +74,43 @@ One of the major competitors that came to mind when coming up with our idea was 
    * An instance of the game will terminate when all users log out of the application and the connection to the server is terminated.
 
 ## High-level Functional Requirements
-1. Platform user interface will display in English.
-1. Mobil page design and desktop experience.
-1. Multiplatform game supported by PC, Web player, android, IOS and other platforms
-1. Back-end programming
-1. Game encourages creativity and daring via branching
-1. The episodic structure facilitates the pace of the story
-1. Flow between different inputs, script, display (outputs)
-1. Story, levels, objects, animation, graphics, script, game engine facilities
-1. Software requirements specifications includes the action flow, initial user interface.
-1. Navigation between different front-ends menus
-1. System environment gamer can interact with system by giving input (press keys)
-1. System gives inputs to script, if any changes occur(if values are changed
-1. Keypad/gamepad, script (compile), renders (display)
-1. After running game UX will appear on the screen.
-1. Use cases based on UX view.
-1. A story provides understanding of the game objective and to finish the stage.
+
+FR01. A user should be able to play a game supported by PC, Web player, android, IOS and other platforms
+FR02. A user should be able to experience creativity and daring via branching
+FR03. A user should encounter ammultiplayer, 2-D platforming linear experience, exploration, and game-play mechanics that allow characters to run, gravity rotation, and jump.
+FR04. A user should be introduced to navigate different paths, overcome obstacles and complete levels with personal preference, complete levels and score, all by the use of a touch scroll bar.
+FR05. A user should be able to control a character, make decisions and choices as if he/her were one entity.
+
+**Gravity Rotation:
+
+FR01. A user should be able to manipulate the game gravity rotation mechanic (real-time gravity) repositioning finger on the scroll bar.
+FR02.The players velocity vector must be affected by different surface inclinations.
+Jumping:
+FR01. The game jump mechanic should be a standard force. Jumping should take into consideration the vertical and horizontal velocities of the character as well as the surface inclination.
+
+**Title Screen:
+
+FR01.A user should find a title screen that must load every time the game is launched.
+FR02. If the player completes the game, the game will end and return the player to the title screen.
+FR03. If the player quits the game during any stage of a level, they must be returned to the title screen.
+FR04. If the player press the exit button, the game end and return the player to the main screen of the phone.
+Pause menu:
+FR01. A user should use the "Exit Game" option and must return the player to the main screen of the game or phone.
+FR02. A user should use the "Resume Game" option and must continue the game without any change to the character's vector or the state of the level from the moment of the pause action.
+
+**External Interface Requirements:
+
+*Hardware Interfaces:
+
+FR01. a user should be lead by a game that is a mobile application designed to be downloaded using the Android phone platform, mobile smart phones, and tablets with similar hardware capability to Android systems.
+The Android platform provides a 2 dimensional graphics library and a 3 dimensional graphics library; hardware orientation, scaling, pixel format conversion which enables the interface with our game.A SQL relational database stores the game application on the Andoid device.
+FR02. Devices with a lower hardware capability than Android systems may run slower or present difficulties to play the game.
+
+*Software Interfaces:
+
+FR01. A user should experience a game wich responds to player's commands in a prompt manner. 
+FR02. A user should be delighted with a game developed under Android operating Systems using Android software Development Kit (Android SDK) for applications on the Android platform. Used in conjunction with the Android SDK and processing, Processing development Environment (PDE), and Primary game development library (Box2d).
+
 
 ## Non-functional Requirements
 1. Graphics performance
