@@ -26,6 +26,10 @@ Version 0.06 - 2/16/21 - Added High-level Functional Requirements
 
 Version 0.07 - 2/26/21 - Edited executive summary
 
+Version 0.08 - 03/03/21 - Edited High-Level System Architecture
+
+Version 0.09 - 03/05/21 - Edited High-level Functional Requirements and Data Definition
+
 ## Executive Summary
 Team 13 will be designing an original multiplayer game, with the goal of connecting people during times of social distancing. The game will be playable in a browser and users will be able to choose who they connect to. The system for allowing users to find each other will be a short randomized code, which can be shared using outside means like text or video communications. Players can maintain privacy by only sharing their code with people they choose. Only the usernames of players will be shared with other players, and all other information will be kept private. 
 
@@ -59,6 +63,13 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **Player**: User playing the game.
 
+**Host**: User that starts a game and can share a code with other users so that these users can join the host's game.
+
+**Code**: A string composed of 5 random letters and numbers that a user must enter to join a game.
+
+**Main lobby**: A screen where a logged-in user can start or join a game.
+
+
 ## Overview, scenarios and use cases
 1. Overview
    * The application is a user-end multiplayer browser-based game written primarily in C#, using the Unity Game Development engine.
@@ -75,41 +86,24 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 ## High-level Functional Requirements
 
-FR01. A user should be able to play a game supported by PC, Web player, android, IOS and other platforms
-FR02. A user should be able to experience creativity and daring via branching
-FR03. A user should encounter ammultiplayer, 2-D platforming linear experience, exploration, and game-play mechanics that allow characters to run, gravity rotation, and jump.
-FR04. A user should be introduced to navigate different paths, overcome obstacles and complete levels with personal preference, complete levels and score, all by the use of a touch scroll bar.
-FR05. A user should be able to control a character, make decisions and choices as if he/her were one entity.
 
-**Gravity Rotation:
-
-FR01. A user should be able to manipulate the game gravity rotation mechanic (real-time gravity) repositioning finger on the scroll bar.
-FR02.The players velocity vector must be affected by different surface inclinations.
-Jumping:
-FR01. The game jump mechanic should be a standard force. Jumping should take into consideration the vertical and horizontal velocities of the character as well as the surface inclination.
-
-**Title Screen:
-
-FR01.A user should find a title screen that must load every time the game is launched.
-FR02. If the player completes the game, the game will end and return the player to the title screen.
-FR03. If the player quits the game during any stage of a level, they must be returned to the title screen.
-FR04. If the player press the exit button, the game end and return the player to the main screen of the phone.
-Pause menu:
-FR01. A user should use the "Exit Game" option and must return the player to the main screen of the game or phone.
-FR02. A user should use the "Resume Game" option and must continue the game without any change to the character's vector or the state of the level from the moment of the pause action.
-
-**External Interface Requirements:
-
-*Hardware Interfaces:
-
-FR01. a user should be lead by a game that is a mobile application designed to be downloaded using the Android phone platform, mobile smart phones, and tablets with similar hardware capability to Android systems.
-The Android platform provides a 2 dimensional graphics library and a 3 dimensional graphics library; hardware orientation, scaling, pixel format conversion which enables the interface with our game.A SQL relational database stores the game application on the Andoid device.
-FR02. Devices with a lower hardware capability than Android systems may run slower or present difficulties to play the game.
-
-*Software Interfaces:
-
-FR01. A user should experience a game wich responds to player's commands in a prompt manner. 
-FR02. A user should be delighted with a game developed under Android operating Systems using Android software Development Kit (Android SDK) for applications on the Android platform. Used in conjunction with the Android SDK and processing, Processing development Environment (PDE), and Primary game development library (Box2d).
+| Unique Identifier |                                                                                                                    Requirement                                                                                                                   |
+|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|        FR01       | A user should be able to register for a unique account.                                                                                                                                                                                          |
+|        FR02       | A user should be able to login and arrive at the main lobby.                                                                                                                                                                                     |
+|        FR03       | A user should be able to join a host's game using a specific code that the host shared with them.                                                                                                                                                |
+|        FR04       | A user should be able to become a host by starting a game and sharing a code with other users so that these users can join the host's game.                                                                                                      |
+|        FR05       | A user should not be able to start or join a game without logging in.                                                                                                                                                                            |
+|        FR06       | A user should not be able to join a host's game without entering the correct code.                                                                                                                                                               |
+|        FR07       | A host should be able to wait for other users to join their game or start playing the game if at least one other player joined the game.                                                                                                         |
+|        FR08       | A user should be able to choose the color of their character.                                                                                                                                                                                    |
+|        FR09       | A user should be able to move left, right, jump and duck to avoid obstacles.                                                                                                                                                                     |
+|        FR10       | A user loses the game if they crash into an obstacle.                                                                                                                                                                                            |
+|        FR11       | A user wins the game if they are the last player remaining in the game.                                                                                                                                                                          |
+|        FR12       | A user gains points for each obstacle they avoid.                                                                                                                                                                                                |
+|        FR13       | A user sees the ranking of the players' points at the end of the game.                                                                                                                                                                           |
+|        FR14       | A host should be able to choose whether to restart the game or not when the game ends. If the host restarts the game, the players do not have to re-enter the code again. If the host does not restart the game, users return to the main lobby.                                                                                                                                                                           |
+|        FR15       | A user should be able to quit the game at any time and return to the main lobby. |
 
 
 ## Non-functional Requirements
