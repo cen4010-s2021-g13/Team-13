@@ -65,7 +65,7 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 **Host**: User that starts a game and can share a code with other users so that these users can join the host's game.
 
-**Code**: A string composed of 5 random letters and numbers that a user must enter to join a game.
+**Code**: A string composed of 6 random letters and numbers that a user must enter to join a game.
 
 **Main lobby**: A screen where a logged-in user can start or join a game.
 
