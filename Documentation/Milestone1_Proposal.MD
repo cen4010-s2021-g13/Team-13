@@ -70,43 +70,58 @@ One of the major competitors that came to mind when coming up with our idea was 
 **Main lobby**: A screen where a logged-in user can start or join a game.
 
 
-## Overview, accessibility, scenarios and use cases
-1. Overview
-   * The application is a user-end multiplayer browser-based game written primarily in C#, using the Unity Game Development engine.
-2. Accessibility
-   * The application should be accessible by any user, administrative or not, through any web browser using standard Hypertext Transfer protocol. The application should function as an excecutable on any system capable of running Windows 10, provided said system operates with a minimum of 8 gigabytes of DDR4 RAM and a dual-core Intel Core-i3 processor (or equivalent).
-3. Scenarios
-   * The application should be accessed via Google Chrome or Mozilla Firefox and each instance of it should be terminable from either browser, respectively. Any given instance of use of said application should be terminable upon no more than half an hour of execution, and each instance should occupy no more than approximately 3 MB of the system's L1 cache. 
-4. Use Cases
-   * A given instance of the application's use should be as follows:
-   * The user logs in via standard hypertext transfer protocol.
-   * The server should respond accordingly, and with ideal performance, the server should operate with a ping of approximately 100 ms or less.
-   * The server will accommodate up to four users in any given instance of the application.
-   * An instance of the game will terminate when all users log out of the application and the connection to the server is terminated.
-   4.1 - Use case 1:
-   * The user opens the application, via web or executable on a mobile or desktop device.
-   * The user either hosts a session or joins one based on a procedurally-generated code given by the host.
-   * The user partakes in the game with approximately 3 other players.
-   * The session ends, and the results of the game are displayed. This will occur regardless of the standing of each player, and in every scenario, each user will have access to the metrics (player rankings) of any given session.
-   4.1 - Use case 2:
-   * The user opens the application, via web or executable on a mobile or desktop device.
-   * The user either hosts a session or joins one based on a procedurally-generated code given by the host.
-   * The user partakes in the game with approximately 3 other players.
-   * In this particular instance, the user does not win the game. They are presented with the option to either exit the session, or spectate the rest of the match.
-   * In any case, the session ends, and the results are once again displayed.
-   4.2 - Use case 3:
-   * The user opens the application, via web or executable on a mobile or desktop device.
-   * The user either hosts a session or joins one based on a procedurally-generated code given by the host.
-   * The user partakes in the game with approximately 3 other players.
-   * The user wins the game! They are presented with a victory screen and the option to start a new session or exit. Once again, the metrics are displayed on screen, depicting the standing of each player. 
+## Overview, Scenarios and Use Cases
+
+### Scenario One
+     
+   * David is a freshman at Florida Atlantic University. He would like to partake in a game that will help him meet new friends since all of his classes are online due to the pandemic. He meets someone named Paul through a Discussion post on Canvas. David invites Paul to play a game. He shares a procedurally-generated code with Paul, which allows him to join a session.
    
-5. Scenarios   
-     5.1 - Scenario One
-   * John is a freshman at Florida Atlantic University. He would like to partake in a game that will help him meet new friends. He meets someone named Paul on campus. John invites Paul to play a game. He shares a procedurally-generated code with Paul, which allows him to join a session.
-     5.2 - Scenario Two
-   * Sofia primarily uses a mobile device to access media. She is a fairly novice gamer and wants to use gaming to connect with people. She installs the game (name pending) and invites a few classmates to play.
-     5.3 - Scenario Three
-   * Max has a new computer. He would like to utilize the computer to play a game, not necessarily as a benchmark, in order to "break it in" with some friends. He sends some of his friends an invite code and they join a session together.
+### Scenario Two
+     
+   * Sofia primarily uses a mobile device to access media. She is a fairly novice gamer and wants to use gaming to feel more connected with her online classmates. She installs the game and invites a few classmates to play.
+   
+### Scenario Three
+     
+   * Max has a new computer. He would like to utilize the computer to play a game, not necessarily as a benchmark, in order to "break it in" with some friends that he has not seen in a while due to the pandemic. He sends some of his friends an invite code and they join a session together.
+
+
+### Use Case 1: User Login
+1. The user opens the game.
+2. The user enters their username.
+3. The user enters their password.
+4. The user clicks on the "Login" button.
+
+
+### Use Case 2: User Signs Up for an Account
+1. The user opens the game.
+2. The user clicks on the "Sign Up" link.
+3. The user enters their email.
+4. The user enters a unique username.
+5. The user enters a password.
+6. The user confirms their password.
+7. The user clicks on "Sign Up."
+
+### Use Case 3: User Hosts a Game
+1. The user logs in successfully.
+2. The user clicks on the "Host Game" button.
+3. The user enters the room name and shares the given code with their friends.
+4. The user clicks on the "Create Room" button.
+
+### Use Case 4: User Joins a Game
+1. The user logs in successfully.
+2. The user clicks on the "Join Game" button.
+3. The user enters the code that was shared with them by the host.
+4. The user clicks on the "Join Game" button.
+
+### Use Case 5: User Plays a Game
+1. The user successfully hosts or joins a game.
+2. The user chooses the color of their character.
+3. The user waits for other players to join the game.
+4. The user votes for the level that they prefer.
+5. The user begins playing the game when the host clicks on the "Play" button.
+6. The user sees the ranking of each player's score at the end of the game.
+7. The user can play the game again if the host clicks on the "Restart" button.
+   
 
 ## High-level Functional Requirements
 
