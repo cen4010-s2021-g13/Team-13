@@ -1,0 +1,1433 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2021-04-01T00:00:01.277-04:00
+  initializedAtString: 2021-03-31T23:58:29.929-04:00
+  log:
+  - commitID: 3ee5d6f9a068537715364f6ebdad6b2ad5a8d367
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: lzullinojuni2020@fau.edu
+    commitEmail: lzullinojuni2020@fau.edu
+    commitName: Luiz
+    summary: Adding Project
+    description: 
+    timeString: 2021-03-31T23:59:08.000-04:00
+    commitTimeString: 2021-03-31T23:59:08.000-04:00
+    changes:
+    - path: Overtake\Library\gfu\cache\gitlog.yaml
+      fullPath: D:\Development\Repo\Team-13\Overtake\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Overtake\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: D:\Development\Repo\Team-13\Overtake\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Overtake\Library\gfu\cache\gituser.yaml
+      fullPath: D:\Development\Repo\Team-13\Overtake\Library\gfu\cache\gituser.yaml
+      projectPath: Library\gfu\cache\gituser.yaml
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: f38598a58f31d9e0bf60e98314a81a45bd851b37
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: lzullinojuni2020@fau.edu
+    commitEmail: lzullinojuni2020@fau.edu
+    commitName: Luiz
+    summary: Test
+    description: 
+    timeString: 2021-03-31T21:33:04.000-04:00
+    commitTimeString: 2021-03-31T21:33:04.000-04:00
+    changes:
+    - path: Overtake\VSSettingsProvider.csproj
+      fullPath: D:\Development\Repo\Team-13\Overtake\VSSettingsProvider.csproj
+      projectPath: VSSettingsProvider.csproj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 926508b4ac3ca5d0ff6a6306e8c8ef7d97e046d8
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: lzullinojuni2020@fau.edu
+    commitEmail: lzullinojuni2020@fau.edu
+    commitName: Luiz
+    summary: Reorganizing
+    description: 
+    timeString: 2021-03-31T21:18:27.000-04:00
+    commitTimeString: 2021-03-31T21:18:27.000-04:00
+    changes:
+    - path: Website\LICENSE
+      fullPath: D:\Development\Repo\Team-13\Website\LICENSE
+      projectPath: ..\Website\LICENSE
+      originalPath: LICENSE
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\agile.png
+      fullPath: D:\Development\Repo\Team-13\Website\agile.png
+      projectPath: ..\Website\agile.png
+      originalPath: agile.png
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\css\shop-homepage.css
+      fullPath: D:\Development\Repo\Team-13\Website\css\shop-homepage.css
+      projectPath: ..\Website\css\shop-homepage.css
+      originalPath: css\shop-homepage.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\gulpfile.js
+      fullPath: D:\Development\Repo\Team-13\Website\gulpfile.js
+      projectPath: ..\Website\gulpfile.js
+      originalPath: gulpfile.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\index.html
+      fullPath: D:\Development\Repo\Team-13\Website\index.html
+      projectPath: ..\Website\index.html
+      originalPath: index.html
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\package-lock.json
+      fullPath: D:\Development\Repo\Team-13\Website\package-lock.json
+      projectPath: ..\Website\package-lock.json
+      originalPath: package-lock.json
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\package.json
+      fullPath: D:\Development\Repo\Team-13\Website\package.json
+      projectPath: ..\Website\package.json
+      originalPath: package.json
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\placeholder.jpg
+      fullPath: D:\Development\Repo\Team-13\Website\placeholder.jpg
+      projectPath: ..\Website\placeholder.jpg
+      originalPath: placeholder.jpg
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\placeholder.png
+      fullPath: D:\Development\Repo\Team-13\Website\placeholder.png
+      projectPath: ..\Website\placeholder.png
+      originalPath: placeholder.png
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\scrum.png
+      fullPath: D:\Development\Repo\Team-13\Website\scrum.png
+      projectPath: ..\Website\scrum.png
+      originalPath: scrum.png
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\sprint.png
+      fullPath: D:\Development\Repo\Team-13\Website\sprint.png
+      projectPath: ..\Website\sprint.png
+      originalPath: sprint.png
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-grid.css
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-grid.css
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-grid.css
+      originalPath: vendor\bootstrap\css\bootstrap-grid.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-grid.css.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-grid.css.map
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-grid.css.map
+      originalPath: vendor\bootstrap\css\bootstrap-grid.css.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-grid.min.css
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-grid.min.css
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-grid.min.css
+      originalPath: vendor\bootstrap\css\bootstrap-grid.min.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-grid.min.css.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-grid.min.css.map
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-grid.min.css.map
+      originalPath: vendor\bootstrap\css\bootstrap-grid.min.css.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-reboot.css
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-reboot.css
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-reboot.css
+      originalPath: vendor\bootstrap\css\bootstrap-reboot.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-reboot.css.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-reboot.css.map
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-reboot.css.map
+      originalPath: vendor\bootstrap\css\bootstrap-reboot.css.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-reboot.min.css
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-reboot.min.css
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-reboot.min.css
+      originalPath: vendor\bootstrap\css\bootstrap-reboot.min.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      originalPath: vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap.css
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap.css
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap.css
+      originalPath: vendor\bootstrap\css\bootstrap.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap.css.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap.css.map
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap.css.map
+      originalPath: vendor\bootstrap\css\bootstrap.css.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap.min.css
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap.min.css
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap.min.css
+      originalPath: vendor\bootstrap\css\bootstrap.min.css
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\css\bootstrap.min.css.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\css\bootstrap.min.css.map
+      projectPath: ..\Website\vendor\bootstrap\css\bootstrap.min.css.map
+      originalPath: vendor\bootstrap\css\bootstrap.min.css.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.bundle.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.bundle.js
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.bundle.js
+      originalPath: vendor\bootstrap\js\bootstrap.bundle.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.bundle.js.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.bundle.js.map
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.bundle.js.map
+      originalPath: vendor\bootstrap\js\bootstrap.bundle.js.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.bundle.min.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.bundle.min.js
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.bundle.min.js
+      originalPath: vendor\bootstrap\js\bootstrap.bundle.min.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      originalPath: vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.js
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.js
+      originalPath: vendor\bootstrap\js\bootstrap.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.js.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.js.map
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.js.map
+      originalPath: vendor\bootstrap\js\bootstrap.js.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.min.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.min.js
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.min.js
+      originalPath: vendor\bootstrap\js\bootstrap.min.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\bootstrap\js\bootstrap.min.js.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\bootstrap\js\bootstrap.min.js.map
+      projectPath: ..\Website\vendor\bootstrap\js\bootstrap.min.js.map
+      originalPath: vendor\bootstrap\js\bootstrap.min.js.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\jquery\jquery.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\jquery\jquery.js
+      projectPath: ..\Website\vendor\jquery\jquery.js
+      originalPath: vendor\jquery\jquery.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\jquery\jquery.min.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\jquery\jquery.min.js
+      projectPath: ..\Website\vendor\jquery\jquery.min.js
+      originalPath: vendor\jquery\jquery.min.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\jquery\jquery.min.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\jquery\jquery.min.map
+      projectPath: ..\Website\vendor\jquery\jquery.min.map
+      originalPath: vendor\jquery\jquery.min.map
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\jquery\jquery.slim.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\jquery\jquery.slim.js
+      projectPath: ..\Website\vendor\jquery\jquery.slim.js
+      originalPath: vendor\jquery\jquery.slim.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\jquery\jquery.slim.min.js
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\jquery\jquery.slim.min.js
+      projectPath: ..\Website\vendor\jquery\jquery.slim.min.js
+      originalPath: vendor\jquery\jquery.slim.min.js
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Website\vendor\jquery\jquery.slim.min.map
+      fullPath: D:\Development\Repo\Team-13\Website\vendor\jquery\jquery.slim.min.map
+      projectPath: ..\Website\vendor\jquery\jquery.slim.min.map
+      originalPath: vendor\jquery\jquery.slim.min.map
+      indexStatus: 6
+      workTreeStatus: 0
+  - commitID: 7258e6d6ffa71531b7932cf0849e0289be633ca0
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-10T13:01:02.000-05:00
+    commitTimeString: 2021-03-10T13:01:02.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 4729cf4ac1fe6b84bd8b106dc0345b6897576752
+    mergeA: 10aac72cd37d7a580d0b2ce97aae4e1748fd1100
+    mergeB: e468ef4eaee1dc146e0b3be41c7f75606fa8c1c9
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #20 from cen4010-s2021-g13/michaelhollinger-patch-3
+    description: Update Milestone1_Proposal.MD
+    timeString: 2021-03-09T21:12:54.000-05:00
+    commitTimeString: 2021-03-09T21:12:54.000-05:00
+    changes: []
+  - commitID: 10aac72cd37d7a580d0b2ce97aae4e1748fd1100
+    mergeA: 1d56c43a835a71e913e6538fe5cc9bef858d990e
+    mergeB: d84d30ad4acfe219ac3e8160cb8b4946762a0700
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #19 from cen4010-s2021-g13/Rosalba/Milestone2
+    description: Add Milestone 2 File
+    timeString: 2021-03-09T21:12:21.000-05:00
+    commitTimeString: 2021-03-09T21:12:21.000-05:00
+    changes: []
+  - commitID: e468ef4eaee1dc146e0b3be41c7f75606fa8c1c9
+    mergeA: 
+    mergeB: 
+    authorName: Michael Hollinger
+    authorEmail: 35614501+michaelhollinger@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-09T20:44:07.000-05:00
+    commitTimeString: 2021-03-09T20:44:07.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: d84d30ad4acfe219ac3e8160cb8b4946762a0700
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Add files via upload
+    description: 
+    timeString: 2021-03-09T19:39:44.000-05:00
+    commitTimeString: 2021-03-09T19:39:44.000-05:00
+    changes:
+    - path: Documentation\Milestone2.pdf
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone2.pdf
+      projectPath: ..\Documentation\Milestone2.pdf
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 1d56c43a835a71e913e6538fe5cc9bef858d990e
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-09T15:51:16.000-05:00
+    commitTimeString: 2021-03-09T15:51:16.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 0d04b7a63ada60a4d67de7c1c7cf102c55b5c2ca
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.MD
+    description: 
+    timeString: 2021-03-09T15:50:37.000-05:00
+    commitTimeString: 2021-03-09T15:50:37.000-05:00
+    changes:
+    - path: README.MD
+      fullPath: D:\Development\Repo\Team-13\README.MD
+      projectPath: ..\README.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 9e86a86941d52037e0f6d49d8cd015627ab8c92c
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-09T14:04:11.000-05:00
+    commitTimeString: 2021-03-09T14:04:11.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 284bf1f7238565861909f30283b040d650392b76
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-09T13:55:47.000-05:00
+    commitTimeString: 2021-03-09T13:55:47.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 56631eb11c42aa417c629f7473e6e1f5e6f89817
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-05T16:24:07.000-05:00
+    commitTimeString: 2021-03-05T16:24:07.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 4f2fc94b736d66badb4db009520533e44e702a0a
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-05T14:19:04.000-05:00
+    commitTimeString: 2021-03-05T14:19:04.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: f6f6f6e31d695a8145be130d3ad399070357ca98
+    mergeA: 7f35212d19432fd8e3886d7cdba529aaf183a3ec
+    mergeB: 2f309c20c24f941d0e177a247af666afedac1286
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #17 from cen4010-s2021-g13/Ruth536-patch-1
+    description: Update Milestone1_Proposal.MD
+    timeString: 2021-03-03T19:38:50.000-05:00
+    commitTimeString: 2021-03-03T19:38:50.000-05:00
+    changes: []
+  - commitID: 2f309c20c24f941d0e177a247af666afedac1286
+    mergeA: 
+    mergeB: 
+    authorName: Ruth Betancourt
+    authorEmail: 77360107+Ruth536@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-03-03T19:03:25.000-05:00
+    commitTimeString: 2021-03-03T19:03:25.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 7f35212d19432fd8e3886d7cdba529aaf183a3ec
+    mergeA: 7c8858ec7288dffdacc0ea45f304a9d8b267fca4
+    mergeB: 0e675a6f25648f976d075a43e944873fb916c917
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #16 from cen4010-s2021-g13/Rosalba/Milestone1
+    description: Revise High-Level System Architecture
+    timeString: 2021-03-03T15:23:25.000-05:00
+    commitTimeString: 2021-03-03T15:23:25.000-05:00
+    changes: []
+  - commitID: 0e675a6f25648f976d075a43e944873fb916c917
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Revise High-Level System Architecture
+    description: 
+    timeString: 2021-03-03T14:20:00.000-05:00
+    commitTimeString: 2021-03-03T14:20:00.000-05:00
+    changes:
+    - path: .gitignore
+      fullPath: D:\Development\Repo\Team-13\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 7c8858ec7288dffdacc0ea45f304a9d8b267fca4
+    mergeA: 315eca9af788ef6a6808d9241f3804cb8d3633da
+    mergeB: d132fe699597520d321fe509075c49d64dc2481c
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #15 from cen4010-s2021-g13/Brandon/Milestone-1
+    description: Update Milestone 1 executive summary
+    timeString: 2021-02-28T19:59:57.000-05:00
+    commitTimeString: 2021-02-28T19:59:57.000-05:00
+    changes: []
+  - commitID: d132fe699597520d321fe509075c49d64dc2481c
+    mergeA: 
+    mergeB: 
+    authorName: BrandonFAU
+    authorEmail: 78377885+BrandonFAU@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone 1 executive summary
+    description: 
+    timeString: 2021-02-26T19:35:37.000-05:00
+    commitTimeString: 2021-02-26T19:35:37.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 315eca9af788ef6a6808d9241f3804cb8d3633da
+    mergeA: 371a48eebfd15051a7ed06e8564ea9cbcf337246
+    mergeB: e763becff6cc7a8473fbc71abe53f0b5e64f8b63
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #14 from cen4010-s2021-g13/michaelhollinger-patch-2
+    description: Update Milestone1_Proposal.MD
+    timeString: 2021-02-16T23:16:12.000-05:00
+    commitTimeString: 2021-02-16T23:16:12.000-05:00
+    changes: []
+  - commitID: e763becff6cc7a8473fbc71abe53f0b5e64f8b63
+    mergeA: 
+    mergeB: 
+    authorName: Michael Hollinger
+    authorEmail: 35614501+michaelhollinger@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T23:01:33.000-05:00
+    commitTimeString: 2021-02-16T23:01:33.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 371a48eebfd15051a7ed06e8564ea9cbcf337246
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T21:28:04.000-05:00
+    commitTimeString: 2021-02-16T21:28:04.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: ffebcd057c6c65585982d7d14b280bd12146d40a
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T21:27:40.000-05:00
+    commitTimeString: 2021-02-16T21:27:40.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: be8aa4a567224dbec00c8e7d9cc7353f2f50402b
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T21:25:57.000-05:00
+    commitTimeString: 2021-02-16T21:25:57.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 97ae34cc1a829af9476f9e244de841f033b5845b
+    mergeA: 
+    mergeB: 
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T21:23:00.000-05:00
+    commitTimeString: 2021-02-16T21:23:00.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: e95a33f73ee2f1e65e81c7261bfac4710bd85745
+    mergeA: 8dee239eaf46dfcc1ba656aeef45dff9d0e6392d
+    mergeB: b3eb72d860e24bf6fae78d1e991f347b9ce650f3
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #13 from cen4010-s2021-g13/michaelhollinger-patch-1
+    description: Update Milestone1_Proposal.MD
+    timeString: 2021-02-16T21:09:06.000-05:00
+    commitTimeString: 2021-02-16T21:09:06.000-05:00
+    changes: []
+  - commitID: b3eb72d860e24bf6fae78d1e991f347b9ce650f3
+    mergeA: 
+    mergeB: 
+    authorName: Michael Hollinger
+    authorEmail: 35614501+michaelhollinger@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T21:00:12.000-05:00
+    commitTimeString: 2021-02-16T21:00:12.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 8dee239eaf46dfcc1ba656aeef45dff9d0e6392d
+    mergeA: 9a7a10a9265e82197f0fc7eee686927ea636b75a
+    mergeB: 43b02513cfe5a9f9b2c33c17ee219ae034ca84b5
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #12 from cen4010-s2021-g13/lzullinojuni2020/milestone1-1
+    description: Update Milestone1_Proposal.MD
+    timeString: 2021-02-16T20:16:01.000-05:00
+    commitTimeString: 2021-02-16T20:16:01.000-05:00
+    changes: []
+  - commitID: 43b02513cfe5a9f9b2c33c17ee219ae034ca84b5
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T20:08:08.000-05:00
+    commitTimeString: 2021-02-16T20:08:08.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 9a7a10a9265e82197f0fc7eee686927ea636b75a
+    mergeA: d32711317bc552c1288d35b0a5b8752c7d8a394e
+    mergeB: c019d0b1285ca5bb988f411e31162589d701c9a8
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #11 from cen4010-s2021-g13/lzullinojuni2020/milestone1
+    description: Lzullinojuni2020/milestone1
+    timeString: 2021-02-16T19:17:42.000-05:00
+    commitTimeString: 2021-02-16T19:17:42.000-05:00
+    changes: []
+  - commitID: c019d0b1285ca5bb988f411e31162589d701c9a8
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T18:57:09.000-05:00
+    commitTimeString: 2021-02-16T18:57:09.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: ebd2fa02f7994e79cc053dc00c12fa67386c7769
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T18:48:25.000-05:00
+    commitTimeString: 2021-02-16T18:48:25.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: f5f89d9b34255ded8bcd8d98921652e1591e9da2
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T18:43:10.000-05:00
+    commitTimeString: 2021-02-16T18:43:10.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: b75649e0744e60dd326fe7333c55bf36f6d30061
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-16T18:16:43.000-05:00
+    commitTimeString: 2021-02-16T18:16:43.000-05:00
+    changes:
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: d32711317bc552c1288d35b0a5b8752c7d8a394e
+    mergeA: c928397bb3b2e185d6c16277884d30817d288acb
+    mergeB: 26fca066257e9969cac8a6942137b0bb1d63b168
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #10 from cen4010-s2021-g13/Rosalba/Milestone1
+    description: Add high-level system architecture to Milestone1_Proposal.md
+    timeString: 2021-02-16T12:31:17.000-05:00
+    commitTimeString: 2021-02-16T12:31:17.000-05:00
+    changes: []
+  - commitID: 26fca066257e9969cac8a6942137b0bb1d63b168
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Add Michael as codeowner
+    description: 
+    timeString: 2021-02-16T11:50:38.000-05:00
+    commitTimeString: 2021-02-16T11:50:38.000-05:00
+    changes:
+    - path: CODEOWNERS
+      fullPath: D:\Development\Repo\Team-13\CODEOWNERS
+      projectPath: ..\CODEOWNERS
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: c7e3e4c0a5c2d3341a393f1e977113e2a45e5390
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Add high-level system architecture, Team, and Data Definition to Milestone1_Proposal.md
+    description: 
+    timeString: 2021-02-16T11:47:08.000-05:00
+    commitTimeString: 2021-02-16T11:47:08.000-05:00
+    changes:
+    - path: .DS_Store
+      fullPath: D:\Development\Repo\Team-13\.DS_Store
+      projectPath: ..\.DS_Store
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: .gitignore
+      fullPath: D:\Development\Repo\Team-13\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Dcoumentation\.DS_Store
+      fullPath: D:\Development\Repo\Team-13\Dcoumentation\.DS_Store
+      projectPath: ..\Dcoumentation\.DS_Store
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Documentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Documentation\Milestone1_Proposal.MD
+      projectPath: ..\Documentation\Milestone1_Proposal.MD
+      originalPath: Dcoumentation\Milestone1_Proposal.MD
+      indexStatus: 6
+      workTreeStatus: 0
+  - commitID: c928397bb3b2e185d6c16277884d30817d288acb
+    mergeA: c3fbe678e0fc18d269ec4131ed82f49a6d2aa547
+    mergeB: 75b14a5f90f3168a9f86b3991cee88866ff135a0
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #9 from cen4010-s2021-g13/Lionmantel-patch-1
+    description: Update (Comperative Analysis/Lionel Munoz) Milestone1_Proposal.MD
+    timeString: 2021-02-15T18:01:20.000-05:00
+    commitTimeString: 2021-02-15T18:01:20.000-05:00
+    changes: []
+  - commitID: 75b14a5f90f3168a9f86b3991cee88866ff135a0
+    mergeA: 
+    mergeB: 
+    authorName: Lionmantel
+    authorEmail: 74432420+Lionmantel@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update Milestone1_Proposal.MD
+    description: 
+    timeString: 2021-02-15T17:57:30.000-05:00
+    commitTimeString: 2021-02-15T17:57:30.000-05:00
+    changes:
+    - path: Dcoumentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Dcoumentation\Milestone1_Proposal.MD
+      projectPath: ..\Dcoumentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: c3fbe678e0fc18d269ec4131ed82f49a6d2aa547
+    mergeA: 02c0febfc2b7b407fcea2a93486ebfe6cd1db8c8
+    mergeB: d06256ce3eddbab9c7434f070f5905e166e6cec6
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #7 from cen4010-s2021-g13/Brandon/Milestone1
+    description: Milestone 1 Executive Summary
+    timeString: 2021-02-15T15:52:41.000-05:00
+    commitTimeString: 2021-02-15T15:52:41.000-05:00
+    changes: []
+  - commitID: d06256ce3eddbab9c7434f070f5905e166e6cec6
+    mergeA: 
+    mergeB: 
+    authorName: BrandonFAU
+    authorEmail: 78377885+BrandonFAU@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Milestone 1 Executive Summary
+    description: 'Adds executive summary
+
+      Adds team members and emails
+
+      changed
+      version to 0.01'
+    timeString: 2021-02-15T15:47:31.000-05:00
+    commitTimeString: 2021-02-15T15:47:31.000-05:00
+    changes:
+    - path: Dcoumentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Dcoumentation\Milestone1_Proposal.MD
+      projectPath: ..\Dcoumentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 02c0febfc2b7b407fcea2a93486ebfe6cd1db8c8
+    mergeA: ed3d0641b1270dbce4df5db749ae6f4d87a88ede
+    mergeB: 583f746f9ca6d1933f692e074fdd110d1a322376
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #5 from cen4010-s2021-g13/Rosalba/readme
+    description: Add Project Proposal Template
+    timeString: 2021-02-12T11:55:16.000-05:00
+    commitTimeString: 2021-02-12T11:55:16.000-05:00
+    changes: []
+  - commitID: 583f746f9ca6d1933f692e074fdd110d1a322376
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Add codeowners
+    description: 
+    timeString: 2021-02-12T11:38:49.000-05:00
+    commitTimeString: 2021-02-12T11:38:49.000-05:00
+    changes:
+    - path: .DS_Store
+      fullPath: D:\Development\Repo\Team-13\.DS_Store
+      projectPath: ..\.DS_Store
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: CODEOWNERS
+      fullPath: D:\Development\Repo\Team-13\CODEOWNERS
+      projectPath: ..\CODEOWNERS
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Dcoumentation\.DS_Store
+      fullPath: D:\Development\Repo\Team-13\Dcoumentation\.DS_Store
+      projectPath: ..\Dcoumentation\.DS_Store
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 388cb133ac24af900fde8241226372feed70120b
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Add Project Proposal Template
+    description: 
+    timeString: 2021-02-12T11:34:16.000-05:00
+    commitTimeString: 2021-02-12T11:34:16.000-05:00
+    changes:
+    - path: .DS_Store
+      fullPath: D:\Development\Repo\Team-13\.DS_Store
+      projectPath: ..\.DS_Store
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Dcoumentation\Milestone1_Proposal.MD
+      fullPath: D:\Development\Repo\Team-13\Dcoumentation\Milestone1_Proposal.MD
+      projectPath: ..\Dcoumentation\Milestone1_Proposal.MD
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: ed3d0641b1270dbce4df5db749ae6f4d87a88ede
+    mergeA: 04d04d168c52487558df469529dcb43a8ce5f524
+    mergeB: 3d710a90702019b50d9f4d8ee6441efb0f141622
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #4 from cen4010-s2021-g13/Lionel/Readme
+    description: Update README.MD
+    timeString: 2021-02-09T19:09:14.000-05:00
+    commitTimeString: 2021-02-09T19:09:14.000-05:00
+    changes: []
+  - commitID: 3d710a90702019b50d9f4d8ee6441efb0f141622
+    mergeA: 
+    mergeB: 
+    authorName: Lionmantel
+    authorEmail: 74432420+Lionmantel@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.MD
+    description: 
+    timeString: 2021-02-09T19:05:18.000-05:00
+    commitTimeString: 2021-02-09T19:05:18.000-05:00
+    changes:
+    - path: README.MD
+      fullPath: D:\Development\Repo\Team-13\README.MD
+      projectPath: ..\README.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 04d04d168c52487558df469529dcb43a8ce5f524
+    mergeA: b86a3ac1ab6dc1ce973dc49151729bd0e297d052
+    mergeB: cc221fdba0c0ccc3eb7bd205600ff313bbfa99fc
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #3 from cen4010-s2021-g13/Brandon/readme
+    description: Update README.MD
+    timeString: 2021-02-08T13:55:20.000-05:00
+    commitTimeString: 2021-02-08T13:55:20.000-05:00
+    changes: []
+  - commitID: cc221fdba0c0ccc3eb7bd205600ff313bbfa99fc
+    mergeA: 
+    mergeB: 
+    authorName: BrandonFAU
+    authorEmail: 78377885+BrandonFAU@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.MD
+    description: Update readme for test pull request
+    timeString: 2021-02-08T13:36:59.000-05:00
+    commitTimeString: 2021-02-08T13:36:59.000-05:00
+    changes:
+    - path: README.MD
+      fullPath: D:\Development\Repo\Team-13\README.MD
+      projectPath: ..\README.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: b86a3ac1ab6dc1ce973dc49151729bd0e297d052
+    mergeA: be68411531f191e9e2aaa9e5dd62390c7aa7235e
+    mergeB: 21ebe412231646912ed3d358f4311016a359af4f
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #2 from cen4010-s2021-g13/lzullinojuni2020-patch-1
+    description: Update README.MD
+    timeString: 2021-02-08T11:29:15.000-05:00
+    commitTimeString: 2021-02-08T11:29:15.000-05:00
+    changes: []
+  - commitID: 21ebe412231646912ed3d358f4311016a359af4f
+    mergeA: 
+    mergeB: 
+    authorName: Luiz
+    authorEmail: 78033313+lzullinojuni2020@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.MD
+    description: 
+    timeString: 2021-02-08T11:26:50.000-05:00
+    commitTimeString: 2021-02-08T11:26:50.000-05:00
+    changes:
+    - path: README.MD
+      fullPath: D:\Development\Repo\Team-13\README.MD
+      projectPath: ..\README.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: be68411531f191e9e2aaa9e5dd62390c7aa7235e
+    mergeA: 6a0b86e536f422a06d294cd6f373cdea41a781e7
+    mergeB: 513880d58b490d639bcb31be1e056697aebb042c
+    authorName: Rosalba Monterrosas
+    authorEmail: 43211322+rosalbamonterrosas@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Merge pull request #1 from cen4010-s2021-g13/Rosalba/readme
+    description: Update readme
+    timeString: 2021-02-02T19:57:55.000-05:00
+    commitTimeString: 2021-02-02T19:57:55.000-05:00
+    changes: []
+  - commitID: 513880d58b490d639bcb31be1e056697aebb042c
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Update readme
+    description: 
+    timeString: 2021-02-02T19:53:05.000-05:00
+    commitTimeString: 2021-02-02T19:53:05.000-05:00
+    changes:
+    - path: README.MD
+      fullPath: D:\Development\Repo\Team-13\README.MD
+      projectPath: ..\README.MD
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 6a0b86e536f422a06d294cd6f373cdea41a781e7
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Added homepage files
+    description: 
+    timeString: 2021-02-02T19:30:15.000-05:00
+    commitTimeString: 2021-02-02T19:30:15.000-05:00
+    changes:
+    - path: LICENSE
+      fullPath: D:\Development\Repo\Team-13\LICENSE
+      projectPath: ..\LICENSE
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: agile.png
+      fullPath: D:\Development\Repo\Team-13\agile.png
+      projectPath: ..\agile.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: css\shop-homepage.css
+      fullPath: D:\Development\Repo\Team-13\css\shop-homepage.css
+      projectPath: ..\css\shop-homepage.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: gulpfile.js
+      fullPath: D:\Development\Repo\Team-13\gulpfile.js
+      projectPath: ..\gulpfile.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: index.html
+      fullPath: D:\Development\Repo\Team-13\index.html
+      projectPath: ..\index.html
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: package-lock.json
+      fullPath: D:\Development\Repo\Team-13\package-lock.json
+      projectPath: ..\package-lock.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: package.json
+      fullPath: D:\Development\Repo\Team-13\package.json
+      projectPath: ..\package.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: placeholder.jpg
+      fullPath: D:\Development\Repo\Team-13\placeholder.jpg
+      projectPath: ..\placeholder.jpg
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: placeholder.png
+      fullPath: D:\Development\Repo\Team-13\placeholder.png
+      projectPath: ..\placeholder.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: scrum.png
+      fullPath: D:\Development\Repo\Team-13\scrum.png
+      projectPath: ..\scrum.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: sprint.png
+      fullPath: D:\Development\Repo\Team-13\sprint.png
+      projectPath: ..\sprint.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-grid.css
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-grid.css
+      projectPath: ..\vendor\bootstrap\css\bootstrap-grid.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-grid.css.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-grid.css.map
+      projectPath: ..\vendor\bootstrap\css\bootstrap-grid.css.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-grid.min.css
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-grid.min.css
+      projectPath: ..\vendor\bootstrap\css\bootstrap-grid.min.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-grid.min.css.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-grid.min.css.map
+      projectPath: ..\vendor\bootstrap\css\bootstrap-grid.min.css.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-reboot.css
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-reboot.css
+      projectPath: ..\vendor\bootstrap\css\bootstrap-reboot.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-reboot.css.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-reboot.css.map
+      projectPath: ..\vendor\bootstrap\css\bootstrap-reboot.css.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-reboot.min.css
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-reboot.min.css
+      projectPath: ..\vendor\bootstrap\css\bootstrap-reboot.min.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      projectPath: ..\vendor\bootstrap\css\bootstrap-reboot.min.css.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap.css
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap.css
+      projectPath: ..\vendor\bootstrap\css\bootstrap.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap.css.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap.css.map
+      projectPath: ..\vendor\bootstrap\css\bootstrap.css.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap.min.css
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap.min.css
+      projectPath: ..\vendor\bootstrap\css\bootstrap.min.css
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\css\bootstrap.min.css.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\css\bootstrap.min.css.map
+      projectPath: ..\vendor\bootstrap\css\bootstrap.min.css.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.bundle.js
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.bundle.js
+      projectPath: ..\vendor\bootstrap\js\bootstrap.bundle.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.bundle.js.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.bundle.js.map
+      projectPath: ..\vendor\bootstrap\js\bootstrap.bundle.js.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.bundle.min.js
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.bundle.min.js
+      projectPath: ..\vendor\bootstrap\js\bootstrap.bundle.min.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      projectPath: ..\vendor\bootstrap\js\bootstrap.bundle.min.js.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.js
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.js
+      projectPath: ..\vendor\bootstrap\js\bootstrap.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.js.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.js.map
+      projectPath: ..\vendor\bootstrap\js\bootstrap.js.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.min.js
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.min.js
+      projectPath: ..\vendor\bootstrap\js\bootstrap.min.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\bootstrap\js\bootstrap.min.js.map
+      fullPath: D:\Development\Repo\Team-13\vendor\bootstrap\js\bootstrap.min.js.map
+      projectPath: ..\vendor\bootstrap\js\bootstrap.min.js.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\jquery\jquery.js
+      fullPath: D:\Development\Repo\Team-13\vendor\jquery\jquery.js
+      projectPath: ..\vendor\jquery\jquery.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\jquery\jquery.min.js
+      fullPath: D:\Development\Repo\Team-13\vendor\jquery\jquery.min.js
+      projectPath: ..\vendor\jquery\jquery.min.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\jquery\jquery.min.map
+      fullPath: D:\Development\Repo\Team-13\vendor\jquery\jquery.min.map
+      projectPath: ..\vendor\jquery\jquery.min.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\jquery\jquery.slim.js
+      fullPath: D:\Development\Repo\Team-13\vendor\jquery\jquery.slim.js
+      projectPath: ..\vendor\jquery\jquery.slim.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\jquery\jquery.slim.min.js
+      fullPath: D:\Development\Repo\Team-13\vendor\jquery\jquery.slim.min.js
+      projectPath: ..\vendor\jquery\jquery.slim.min.js
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: vendor\jquery\jquery.slim.min.map
+      fullPath: D:\Development\Repo\Team-13\vendor\jquery\jquery.slim.min.map
+      projectPath: ..\vendor\jquery\jquery.slim.min.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: e297221bb3e738df9a2e59d3f31be835b3c77ad8
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Add codeowners
+    description: 
+    timeString: 2021-01-28T10:08:44.000-05:00
+    commitTimeString: 2021-01-28T10:08:44.000-05:00
+    changes:
+    - path: CODEOWNERS
+      fullPath: D:\Development\Repo\Team-13\CODEOWNERS
+      projectPath: ..\CODEOWNERS
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: a34250b87ff100fb5d68941e577451fb5c4cbeee
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Add readme
+    description: 
+    timeString: 2021-01-28T10:05:03.000-05:00
+    commitTimeString: 2021-01-28T10:05:03.000-05:00
+    changes:
+    - path: README.MD
+      fullPath: D:\Development\Repo\Team-13\README.MD
+      projectPath: ..\README.MD
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 0a645467a22118ad43ecd060761c7d051b551bc9
+    mergeA: 
+    mergeB: 
+    authorName: rosalbamonterrosas
+    authorEmail: rosiemont07@hotmail.com
+    commitEmail: rosiemont07@hotmail.com
+    commitName: rosalbamonterrosas
+    summary: Initial commit
+    description: 
+    timeString: 2021-01-28T10:04:37.000-05:00
+    commitTimeString: 2021-01-28T10:04:37.000-05:00
+    changes:
+    - path: .gitignore
+      fullPath: D:\Development\Repo\Team-13\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
