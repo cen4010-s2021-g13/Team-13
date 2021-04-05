@@ -30,6 +30,8 @@ Version 0.08 - 03/03/21 - Edited High-Level System Architecture
 
 Version 0.09 - 03/05/21 - Edited High-level Functional Requirements and Data Definition
 
+Version 0.10 - 04/05/21 - Added priorities to Functional Requirements, updated Data Definition, added UML class diagrams, added UML Component and Deployment Diagrams
+
 ## Executive Summary
 Team 13 will be designing an original multiplayer game, with the goal of connecting people during times of social distancing. The game will be playable in a browser and users will be able to choose who they connect to. The system for allowing users to find each other will be a short randomized code, which can be shared using outside means like text or video communications. Players can maintain privacy by only sharing their code with people they choose. Only the usernames of players will be shared with other players, and all other information will be kept private. 
 
@@ -214,7 +216,7 @@ https://docs.unity3d.com/Manual/Unity2D.html
 ## High-Level UML Diagrams
 ### UML Class Diagrams
 ![Class Diagrams](assets/class_diagram.png)
-
+<br></br>
 ### UML Component and Deployment Diagrams
 ![Component and Deployment Diagrams](assets/component_deployment_diagram.png)
 
