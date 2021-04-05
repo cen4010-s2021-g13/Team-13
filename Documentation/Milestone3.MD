@@ -213,10 +213,10 @@ https://docs.unity3d.com/Manual/Unity2D.html
 
 ## High-Level UML Diagrams
 ### UML Class Diagrams
-![Class Diagrams](class_diagram.png)
+![Class Diagrams](assets/class_diagram.png)
 
 ### UML Component and Deployment Diagrams
-![Component and Deployment Diagrams](component_deployment_diagram.png)
+![Component and Deployment Diagrams](assets/component_deployment_diagram.png)
 
 ## Checklist
 
