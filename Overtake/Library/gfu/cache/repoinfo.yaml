@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2021-04-01T00:00:01.261-04:00
-  initializedAtString: 2021-03-31T23:58:23.830-04:00
+  lastUpdatedAtString: 2021-04-06T01:39:17.454-04:00
+  initializedAtString: 2021-04-06T01:39:17.454-04:00
   currentGitRemote:
     name: origin
     url: https://github.com/cen4010-s2021-g13/Team-13.git
@@ -24,14 +24,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: luiz
-    tracking: origin/luiz
+    name: main
+    tracking: 
   currentConfigBranch:
-    name: luiz
+    name: main
     remote:
-      name: origin
-      url: https://github.com/cen4010-s2021-g13/Team-13.git
-    trackingBranch: luiz
+      name: 
+      url: 
+    trackingBranch: 
   currentConfigRemote:
     name: origin
     url: https://github.com/cen4010-s2021-g13/Team-13.git
