@@ -32,6 +32,8 @@ Version 0.09 - 03/05/21 - Edited High-level Functional Requirements and Data Def
 
 Version 0.10 - 04/05/21 - Added priorities to Functional Requirements, updated Data Definition, added UML class diagrams, added UML Component and Deployment Diagrams
 
+Version 0.11 - 04/05/21 - Added Key Risks
+
 ## Executive Summary
 Team 13 will be designing an original multiplayer game, with the goal of connecting people during times of social distancing. The game will be playable in a browser and users will be able to choose who they connect to. The system for allowing users to find each other will be a short randomized code, which can be shared using outside means like text or video communications. Players can maintain privacy by only sharing their code with people they choose. Only the usernames of players will be shared with other players, and all other information will be kept private. 
 
@@ -220,6 +222,8 @@ https://docs.unity3d.com/Manual/Unity2D.html
 ### UML Component and Deployment Diagrams
 ![Component and Deployment Diagrams](assets/component_deployment_diagram.png)
 
+## Key Risks
+   The individuals in our team have provided a diverse skill set that has allowed as to avoid most skill or knowledge-based risks. One risk that has been plaguing our group from the beginning is scheduling. Our goal was to have daily, brief, scrum meetings to coordinate and keep track of progress.  Having all members of the group daily has been a struggle but we have been bolstering our communication through instant messaging and keeping detailed minutes of meetings to share with members who miss meetings. A risk that might affect us in the future has to do with the LAMP server. We plan to host our video game on the lamp server to allow multiplayer function. The strength of the lamp server is unknown to us and may cause issues and may limit the number of players who can play at once or limit the complexity of our game. The sooner we can begin beta testing on the server, the sooner we will understand our limitations, if there are any.
 ## Checklist
 
 a)  Team decided on basic means of communications: DONE
