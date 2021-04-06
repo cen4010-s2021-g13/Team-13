@@ -186,7 +186,7 @@ Use our group’s LAMP server provided by the university.
 ### Client-Server Relationship
 
 * Client-side: JavaScript
-* Server-side: PHP
+* Server-side: C#
 
 ### API’s
 
