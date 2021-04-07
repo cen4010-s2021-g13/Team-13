@@ -178,7 +178,11 @@ One of the major competitors that came to mind when coming up with our idea was 
 
 ### Database
 
-Use MySQL database service on the Lamp server. The database will store the players’ login information (unique username and hashed password), game data, and their highest score.
+1. Will use SQLite integration with the Unity engine. The database will store the players’ login information (unique username and hashed password), game data, and their highest score.
+   * Thus far, the database will be comprised of two tables: "players", and "session". "Players" will be comprised of 3 fields: name, ID (which will be procedurally generated), and High Score (which will keep track of the player's high score). "Session" will, likewise, be comprised of 3 fields: host_ID (which will serve as a foreign key from Players), stage, and winner. This is tentative, as technical demands may require a more complex database architecture.
+   * All images and video will be stored in drives as opposed to the database, as the game primarily uses assets. The only information stored by the database will be the information listed above.
+   * For the time being, linear search will be implemented to retrieve and update player scores, as the database usage is not estimated to be particularly high.
+   * Linear search is an efficient way of implementing a simple method of researching player scores and comparing them to the score that was attained in any given round. When a high score is surpassed, updating the aforementioned record will be comprised of a single "Update" query in SQLite, which will be implemented in conjunction with multiplayer functionality.
 
 ### Server
 Use our group’s LAMP server provided by the university.
