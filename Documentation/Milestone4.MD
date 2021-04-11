@@ -12,7 +12,7 @@
 ## Luiz Zullino Junior (Product Owner): lzullinojuni2020@fau.edu
 ## 04/11/2021
 ## History Table
-Version 0.00 - 04/11/21 - Added template, Usability Test Plan
+Version 0.00 - 04/11/21 - Added template, Usability Test Plan, and Self-Check: Adherence to Original Non-Functional Specs
 
 # Product Summary
 
