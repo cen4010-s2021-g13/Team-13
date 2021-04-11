@@ -34,6 +34,7 @@ Specifically, the objective of the "System Setup" tests is to make sure that the
 |         2        |     OS     |                    The game can be accessed by an OS.                    |              |
 |         3        |   Browser  |        The game is supported by Google Chrome and Mozilla Firefox.       |              |
 |         4        |    Wi-Fi   |                   Wi-Fi is required to access the game.                  |              |
+
 <br></br>
 
 ### Starting Point
@@ -44,6 +45,7 @@ Specifically, the objective of the "System Setup" tests is to make sure that the
 |         2        | Character Location |            The player sees their character at the initial point of the map.            |              |
 |         3        |   Player's Lives   |                    The player should have all three of their lives.                    |              |
 |         4        |       Points       |                         The player should start with 0 points.                         |              |
+
 <br></br>
 
 ### Task to be Accomplished
@@ -54,6 +56,7 @@ Specifically, the objective of the "System Setup" tests is to make sure that the
 |         2        |  Losing Lives  | The player's task is to avoid the obstacles and not fall off the map in order to not lose thier lives. |              |
 |         3        | Earning Points |                             The player earns points by avoiding obstacles.                             |              |
 |         4        |      Goal      |                      The player's goal is to earn more points than their friends.                      |              |
+
 <br></br>
 
 ### Who is the Intended User
@@ -61,6 +64,7 @@ Specifically, the objective of the "System Setup" tests is to make sure that the
 | Test Case Number |   Test Title  |                                                    Test Description                                                   | Test Results |
 |:----------------:|:-------------:|:---------------------------------------------------------------------------------------------------------------------:|:------------:|
 |         1        | Intended User | The intended user is a college student who wants to connect more with their friends while keeping safe from COVID-19. |              |
+
 <br></br>
 
 ### Completion Criteria
@@ -68,6 +72,7 @@ Specifically, the objective of the "System Setup" tests is to make sure that the
 | Test Case Number |      Test Title     |                        Test Description                       | Test Results |
 |:----------------:|:-------------------:|:-------------------------------------------------------------:|:------------:|
 |         1        | Completion Criteria | The game ends when the player loses all three of their lives. |              |
+
 <br></br>
 
 ### The URL of the System to be Tested
@@ -75,6 +80,7 @@ Specifically, the objective of the "System Setup" tests is to make sure that the
 | Test Case Number |             Test Title             |                                    Test Description                                    | Test Results |
 |:----------------:|:----------------------------------:|:--------------------------------------------------------------------------------------:|:------------:|
 |         1        | The URL of the System to be Tested | The URL of the system to be tested: https://lamp.cse.fau.edu/~cen4010_s21_g13/overtake |              |
+
 <br></br>
 
 ## Questionnaire Form
@@ -86,6 +92,7 @@ Please check the column that best represents how you feel about your game playin
 | 1. It is easy to learn how to play the game.                        |                   |          |         |       |                |
 | 2. I did not encounter any technical issues while playing the game. |                   |          |         |       |                |
 | 3. It was an enjoyable experience playing the game.                 |                   |          |         |       |                |
+
 <br></br>
 
 # QA Test Plan
@@ -95,3 +102,17 @@ Please check the column that best represents how you feel about your game playin
 # Self-Check on Best Practices for Security
 
 # Self-Check: Adherence to Original Non-Functional Specs
+
+|         Topic        |                                                                      Non-Functional Requirements                                                                     | Status |
+|:--------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------:|
+| Graphics performance | 1. The game needs to run with a frame rate of at least 30fps on average. The optimal frame rate range is between 30fps and 60fps.                                    |  DONE  |
+| Ease of use          | 2. The game and the game menu needs to be simple to use.                                                                                                             |  DONE  |
+| Response time        | 3. The game needs a near realtime response on average for the inputs of less than 30ms.                                                                              |  DONE  |
+| Client Resources     | 4. The game will run on a webpage so that it can be accessed by any OS.                                                                                              |  DONE  |
+| Client Resources     | 5. The game needs to be lightweight with no more than 300MB of size.                                                                                                 |  DONE  |
+| Client Resources     | 6. The game needs to be able to run with a minimum of 1024MB of memory.                                                                                              |  DONE  |
+| Server Resources     | 7. The server needs to run the OS Windows 10.                                                                                                                        |  DONE  |
+| Server Resources     | 8. The sever instance needs to have less than 1024MB of size.                                                                                                        |  DONE  |
+| Server Resources     | 9. The server instance needs to run with a minimum of 2048MB of memory.                                                                                              |  DONE  |
+| Netcode              | 10. The response time between the client and server needs to be on average below 60ms.                                                                               |  DONE  |
+| Maintainability      | 11. The code for the game needs to be written in a way that it can be maintained and updated in case of bugs/glitches are found or if the game needs to be expanded. |  DONE  |
