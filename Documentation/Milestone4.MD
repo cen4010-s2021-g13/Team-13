@@ -116,3 +116,25 @@ Please check the column that best represents how you feel about your game playin
 | Server Resources     | 9. The server instance needs to run with a minimum of 2048MB of memory.                                                                                              |  DONE  |
 | Netcode              | 10. The response time between the client and server needs to be on average below 60ms.                                                                               |  DONE  |
 | Maintainability      | 11. The code for the game needs to be written in a way that it can be maintained and updated in case of bugs/glitches are found or if the game needs to be expanded. |  DONE  |
+2.6
+Self-check best practice for security
+Best security practice, being aware of the threats, and prepare to find a customized solution from a third party.
+1)	List of major assets: characters, objects, environment, special effects, special sounds, background music, bits of programming, user made content, behavior and function of the game, future introductions and improvement of environment and scenes, new features and expansion of the game.
+2)	Password is encrypted in the Database.
+
+3)	Input data validation:
+If input breaks a validation rule, input is not accepted.
+For example a field name, accepts only names, not a number
+User name, password, selections.
+Please input a number between 1 to 10 SUBMIT input Okay or Not valid
+
+Validation of search bar input:
+
+def replacement(item):
+        return {
+            'username': 'user__username',
+            'foo': 'bar',
+        }.get(item, 'user__username')
+
+    search_bar = SearchBar(request, ['username'], replacement=replacement)
+
