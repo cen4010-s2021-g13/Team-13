@@ -14,7 +14,24 @@
 ## History Table
 Version 0.00 - 04/11/21 - Added template, Usability Test Plan, and Self-Check: Adherence to Original Non-Functional Specs
 
+Version 0.01 - 04/13/21 - Added product summary
+
 # Product Summary
+Our product called “Overtake” is an original game developed in the Unity game engine and playable using a modern web browser. Overtake is a single-player 2D platform game aimed at people wanting to take a short break, and features simple controls and interface. Users will go through the game level by running and jumping, and when the game is over their score will be saved. Users of the game will be able to compare their scores with others by sharing their usernames with each other and checking the high score leaderboard. The game can be marketed through users who wish to share their score using social media, and having them invite others to beat their score. During the times of Covid-19, the game is also a way for people to connect while maintaining social distancing.
+
+## Major Committed Functions
+* Users will be able to register for an account using an email address, username, and password
+* Users will be able to log in with a username and password
+* Users will be able to play the game after logging in
+* Users will be able to change the color of their game character
+* Users will have their score saved to a leaderboard under their username
+* Users will be able to look up the high score leaderboard
+
+## Unique Features
+* The game is free and has no ads
+
+## URL
+https://lamp.eng.fau.edu/~cen4010_s21_g13/Overtake/
 
 # Usability Test Plan
 
