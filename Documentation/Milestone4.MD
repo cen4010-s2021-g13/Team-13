@@ -101,6 +101,70 @@ Please check the column that best represents how you feel about your game playin
 
 # Self-Check on Best Practices for Security
 
+## Major Assets we are protecting
+
+* The user's password
+* The user's email
+
+## Password Encryption
+
+The user's password is encrypted in the database using the following steps:
+
+1. Create a random salt value.
+2. Append the salt to the user's password.
+3. Hash the combined salt and password.
+4. Append the salt to the resultant hash.
+5. Store the result in the database.
+
+## Input Data Validation
+
+* Valid username and password when the user is logging in.
+
+```
+SELECT 1 FROM userDB WHERE username=Username AND password=Password
+```
+
+* Valid email address when the user is registering for an account.
+
+```
+bool IsValidEmail(string email)
+{
+    try {
+        var addr = new System.Net.Mail.MailAddress(email);
+        return addr.Address == email;
+    }
+    catch {
+        return false;
+    }
+}
+```
+
+* Confirm Password input is the same as the Password input when the user is registering for an account.
+
+```
+bool IsValidConfirmPassword(string confirmPassword, string Password)
+{
+    try {
+        return confirmPassword == Password;
+    }
+    catch {
+        return false;
+    }
+}
+```
+
+* Username does not already exist when the user is registering for an account.
+
+```
+SELECT 1 FROM userDB WHERE username=Username
+```
+
+* When the user is registering for an account, there are no empty input fields.
+
+```
+string.IsNullOrEmpty(TextBox.Text)
+```
+
 # Self-Check: Adherence to Original Non-Functional Specs
 
 |         Topic        |                                                                      Non-Functional Requirements                                                                     | Status |
