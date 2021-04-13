@@ -116,6 +116,149 @@ Please check the column that best represents how you feel about your game playin
 
 # Code Review
 
+# PlayerMovement Class
+
+## Variables to define movement
+```
+public float speed = 40f;
+float horizontalMove = 0f;
+
+bool jump = false;
+bool isDead = false;
+bool isFinished = false;
+```
+
+## Collision Check to see if player hit obstacles or the end coin
+```
+void OnCollisionEnter2D(Collision2D collision)
+{
+    //Check collision with Obstacles
+    if (collision.gameObject.name == "Obstacles")
+    {
+        isDead = true;
+        OnDeath.Invoke();
+    }
+
+    //Check collision with Coin for winning/finish line
+    if (collision.gameObject.name == "Coin")
+    {
+        horizontalMove = 0;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        collision.gameObject.SetActive(false);
+        isFinished = true;
+        OnFinish.Invoke();
+    }
+}
+```
+
+## Update function called every tick. Used to update controller inputs and if the player fell out of the screen
+```
+void Update()
+{
+    //Check if player fell off the screen
+    if (circleCollider.bounds.center.y < deathBoundary)
+    {
+        isDead = true;
+        OnDeath.Invoke();
+    }
+
+    if (!isDead && !isFinished)
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        //Jump
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+            animator.SetBool("isJumping", true);
+        }
+    }
+
+    //Check if player is grounded to reset animation
+    if (IsGrounded())
+    {
+        animator.SetBool("isJumping", false);
+    }
+}
+```
+## Function to check if the player is on the ground
+```
+private bool IsGrounded()
+{
+    float extraHeight = -0.01f;
+    RaycastHit2D raycastHit = Physics2D.Raycast(circleCollider.bounds.center, Vector2.down, circleCollider.radius + extraHeight, layerMask);
+    Color rayColor;
+    if (raycastHit.collider != null)
+    {
+        rayColor = Color.green;
+    }
+    else
+    {
+        rayColor = Color.red;
+    }
+    Debug.DrawRay(circleCollider.bounds.center, Vector2.down * (circleCollider.radius + extraHeight));
+    return raycastHit.collider != null;
+}
+```
+
+## FixedUpdate function updates every frame to move the player
+```
+void FixedUpdate()
+{
+    //Move player
+    controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+    jump = false;
+}
+```
+# CameraMovement Class
+
+## Class is used to move the camera according to player position
+```
+public class CameraMovement : MonoBehaviour
+{
+    public Transform player;
+    public Vector3 offset;
+
+    void Update()
+    {
+        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
+    }
+}
+```
+
+# SceneLoader Class
+
+## Class is used to change the current scene
+```
+public class SceneLoader : MonoBehaviour
+{
+	//Load Main Menu
+	public void LoadMenu()
+    {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+	}
+	//Load Next Level
+	public void LoadGame()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+	//Reload Current Level
+	public void ReloadGame()
+    {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);		
+	}
+	//Quit Game
+	public void QuitGame()
+	{
+		Application.Quit();
+		Debug.Log("Quitting Game");
+	}
+}
+```
+
 # Self-Check on Best Practices for Security
 
 ## Major Assets we are protecting
