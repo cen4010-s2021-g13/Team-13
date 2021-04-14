@@ -128,16 +128,19 @@ The feature we will be testing is the playable level of Overtake. The tests we w
 |:----------------:|:------------------:|:------------------------------:|:-------------------------------:|:---------------------------------------:|:-----------:|
 |         1        |     Platforming    | Testing Movement and Collision |     Keyboard movement keys      |   Character moves, objects stop them    |    Pass     |
 |         2        |       Winning      |   Testing Victory Condition    |      Crossing finish line       |     Victory message is displayed        |    Pass     |
-|         3        |       Loosing      |    Testing Loss Condition      |Hitting spikes or falling of edge|     Defeat message is displayed         |    Pass     |
+|         3        |       Losing      |    Testing Loss Condition      |Hitting spikes or falling of edge|     Defeat message is displayed         |    Pass     |
 
 ## Results:
 As seen in the table above, our product was able to pass every single test case on both Google Chrome and Mozilla Firefox. During test one, we were able to successfully navigate all terrain and all the obstacles and platforms provided collision to interact with. One concern that did come up was travelling across the inclined area. There was a slight graphical issue if you jumped on the incline and continued moving. While we will investigate this in the future, it does not impact the playability or functioning of the game. For test two, we were able to confirm that the coin at the end of the level provided the win condition of the game and displayed the victory message. No other terrain or space could recreate this, which is expected. Finally for case three, we were able to test that only the spikes, saws, and lower boundary of the map could cause a defeat condition and display the defeat message.
 # Code Review
+The vast majority of this project uses standard object-oriented C# practices, in addition to the LAMP stack coding practices used to develop the team's website. Commentary on the code is written below, which mainly comments on the various programming paradigms that were used in development. Most physics-related behavior is based on standard collision detection within the Unity API (e.g. onCollisionEnter2D), and all other physical constants were implemented with the standard Unity API as well (e.g. gravity). 
 
 # PlayerMovement Class
 
 ## Variables to define movement
 ```
+//Global variables are well-defined here.
+
 public float speed = 40f;
 float horizontalMove = 0f;
 
@@ -148,6 +151,7 @@ bool isFinished = false;
 
 ## Collision Check to see if player hit obstacles or the end coin
 ```
+//A simple boolean collision detection function.
 void OnCollisionEnter2D(Collision2D collision)
 {
     //Check collision with Obstacles
@@ -157,6 +161,7 @@ void OnCollisionEnter2D(Collision2D collision)
         OnDeath.Invoke();
     }
 
+    //the animator class was used with care here, on account of the absolute value of the horizontal motion being taken in as a parameter.
     //Check collision with Coin for winning/finish line
     if (collision.gameObject.name == "Coin")
     {
@@ -181,6 +186,7 @@ void Update()
         OnDeath.Invoke();
     }
 
+    //negates deltaTime value but works due to speed constant and GetAxisRaw
     if (!isDead && !isFinished)
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
@@ -194,7 +200,7 @@ void Update()
             animator.SetBool("isJumping", true);
         }
     }
-
+    //See further commentary, but this works
     //Check if player is grounded to reset animation
     if (IsGrounded())
     {
@@ -204,6 +210,9 @@ void Update()
 ```
 ## Function to check if the player is on the ground
 ```
+//could be optimized with: function IsGrounded(): boolean {
+//   return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1);
+// } or a comparable function.
 private bool IsGrounded()
 {
     float extraHeight = -0.01f;
@@ -226,6 +235,7 @@ private bool IsGrounded()
 ```
 void FixedUpdate()
 {
+    //used fixedDeltaTime to account for the fact that movement is calculated on a frame-by-frame basis.
     //Move player
     controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
     jump = false;
@@ -242,6 +252,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
+    	//the z-axis is only taken as a parameter out of formality here; the offset values apply to the only axes ingame.
         transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
     }
 }
