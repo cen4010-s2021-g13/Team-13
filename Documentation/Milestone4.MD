@@ -31,7 +31,7 @@ Our product called “Overtake” is an original game developed in the Unity gam
 * The game is free and has no ads
 
 ## URL
-https://lamp.eng.fau.edu/~cen4010_s21_g13/Overtake/
+https://cen4010-s2021-g13.github.io/
 
 # Usability Test Plan
 
@@ -113,7 +113,25 @@ Please check the column that best represents how you feel about your game playin
 <br></br>
 
 # QA Test Plan
+## Test Objectives:
+During the usability test phase our goal is to see how easy or intuitive, accessing and playing the level is. During the Quality Assurance phase, we will be looking to see if the game is working as intended. The strategy that we will intend to use when testing the ability of the games function to work as intended, we will stick to testing the edge parameters of our cases.
 
+## Hardware and Software Setup:
+The hardware required to test the functionality while in the game are a computer with access to the internet, a monitor to display the game, a mouse to navigate the user interface of the operating system and browser, and a keyboard to operate the character withing the game. The software required for testing are Mozilla Firefox and Google Chrome, there is no installation required for the game because it is hosted on the FAU LAMP server.
+	
+## Feature to be tested:
+The feature we will be testing is the playable level of Overtake. The tests we will be performing will be conducted on two browsers, Google Chrome, and Mozilla Firefox. Being limited to only three test cases, we will look to test the three core functions of the game design: platforming, winning, and loosing. With platforming we will look to test movement and collision. When concerned with winning we will test that there is only one victory condition, reaching the end of the level, and that it works. Finally, we will test that only the appropriate objects or terrain cause the loosing condition of death.
+
+## Test Cases:
+
+| Test Case Number |     Test Title     |         Test Description       |               Input             |                 Output                  |Pass or Fail
+|:----------------:|:------------------:|:------------------------------:|:-------------------------------:|:---------------------------------------:|:-----------:|
+|         1        |     Platforming    | Testing Movement and Collision |     Keyboard movement keys      |   Character moves, objects stop them    |    Pass     |
+|         2        |       Winning      |   Testing Victory Condition    |      Crossing finish line       |     Victory message is displayed        |    Pass     |
+|         3        |       Loosing      |    Testing Loss Condition      |Hitting spikes or falling of edge|     Defeat message is displayed         |    Pass     |
+
+## Results:
+As seen in the table above, our product was able to pass every single test case on both Google Chrome and Mozilla Firefox. During test one, we were able to successfully navigate all terrain and all the obstacles and platforms provided collision to interact with. One concern that did come up was travelling across the inclined area. There was a slight graphical issue if you jumped on the incline and continued moving. While we will investigate this in the future, it does not impact the playability or functioning of the game. For test two, we were able to confirm that the coin at the end of the level provided the win condition of the game and displayed the victory message. No other terrain or space could recreate this, which is expected. Finally for case three, we were able to test that only the spikes, saws, and lower boundary of the map could cause a defeat condition and display the defeat message.
 # Code Review
 
 # PlayerMovement Class
