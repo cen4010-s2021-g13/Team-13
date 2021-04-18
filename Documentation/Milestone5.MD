@@ -13,7 +13,7 @@
 ## 04/18/2021
 ## Project URL: https://cen4010-s2021-g13.github.io/
 ## History Table
-Version 0.00 - 04/18/21 - Added template of document, Project Summary, Milestone Documents
+Version 0.00 - 04/18/21 - Added template of document, Project Summary, Milestone Documents, Post-Project Analysis
 
 # Project Summary
 
@@ -304,3 +304,44 @@ g)  Team lead ensured that all team members read the final M1 and agree/understa
 ## Team Members' Contribution
 
 ## Post-Project Analysis
+
+### Main Challenges
+
+#### Scheduling
+
+One of our team's main challenges is scheduling and coordinating the daily scrum meetings. Our team's goal was to have daily, brief, scrum meetings to coordinate and keep track of progress. At the beginning of the semester, the team agreed to have scrum on Mondays at 9am and Tuesdays - Fridays at 7pm. However, as we progressed through the semester, the schedules of some our team members changed, so we had to agree on a different schedule for scrum. Our new scrum schedule was Mondays - Fridays at 7pm. Nonetheless, after some more time elapsed, our team members' schedule changed again, so our scrum schedule changed to Mondays - Fridays at 6:40pm. 
+
+After realizing the difficulty of scheduling the daily scrum meetings so that all team members can be present for the daily scrum, Rosalba, our team's Scrum Master, decided to begin keeping notes of the detailed minutes of the scrum meetings in order to address this scheduling challenge. Rosalba would send these detailed meeting minutes to the rest of the team in order to keep bolstering our communication and update the team members who could not make it to the scrum meeting.
+
+What our team could do better next time to address our scheduling challenge is to begin taking notes of the detailed minutes of the scrum meetings since the beginning of the semester. This way, the communication among our team members could have been a lot smoother since the beginning of the semester.
+
+#### Allocation of Tasks Among Team Members
+
+Another main challenge that our team has experienced throughout the semester is allocating the tasks to be completed among the members of our team for each sprint. Since the individuals in our team have provided a diverse skill set, it is difficult to get to really know and understand the exact skills that each team member offers due to the limited amount of time we have to work on the project. For example, some team members do not have any web development skills, while the expertise of other team members is web development. In addition, some team members are better at writing and formatting documentation, others are better at designing and creative tasks, while other team members are better at developing the game. Therefore, during the first few sprints, it was challenging to figure out the skills of each team member and to assign an appropriate task to each individual. 
+
+In order to address this challenge of dividing up the work among the team members, the individuals in our team began discussing what their strengths are and what tasks they would like to complete. Thus, instead of assigning each team member a random task, each team member would vocalize what work they would like to complete based on the skills that they realized they had. For instance, some team members stated that they would like to handle the database since they had previous experience dealing with databases.
+
+What our team could do better next time to address this particular challenge is to have a discussion at the beginning of the semester where each team member discusses what skills they can offer and any previous experience that can be helpful for completing the project. This way, the productivity of our team can be greatly increased.
+
+### Finished Features
+
+* Users will be able to register for an account using an email address, username, and password
+* Users will be able to log in with a username and password
+* Users will be able to play the game after logging in
+* Users will be able to change the color of their game character
+* Users will have their score saved to a leaderboard under their username
+* Users will be able to look up the high score leaderboard
+
+### Features Not Finished
+
+* Our team would have liked to finish the live multiplayer functionality of the game but we were not able to finish this feature due to the limited amount of time we had to complete the product and the fact that none of our team members had previous experience with implementing multiplayer functionality into a game. Consequently, our team did not have time to learn how to incorporate the live multiplayer functionality. Thus, instead of having live mulitplayer included in the game, our team agreed that it was more manageable to include a multiplayer leaderboard that shows the username and points of all the people who have played the game. This way, the game still involves a multiplayer functionality to connect different people.
+
+* Since our team was not able to complete the live multiplayer functionality of the game, our team also decided that it was better to not include the Room Code feature into the product. Without having the live multiplayer functionality of the game, it did not make sense to include the Room Code because the purpose of the Room Code was to connect multiple people together to play together live in the same game.
+
+### Knowledge Gained and Lessons Learned
+
+An important lesson that our team learned from our project and teamwork is how to better manage scheduling of the scrum meetings. It is critical to take notes of the detailed minutes of all the scrum meetings. Taking these notes and sending them to all of the team members will greatly improve the communication among our team members so that all team members can get updated with the most recent information.
+
+Another important lesson that the members of our team learned is to openly discuss among all the team members what each individual's strengths are and in what ways they can help contribute to the product most effectively. Having this friendly and open discussion will help each other understand which tasks they should work on, which will highly improve the team's productivity.
+
+Other knowledge that our team has gained is that it is extremely difficult to complete all of the features and requirements that were first proposed. We now have a better understanding as to why most software engineering projects do not finish on time.
