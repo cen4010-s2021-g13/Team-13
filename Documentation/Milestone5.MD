@@ -17,6 +17,8 @@ Version 0.00 - 04/18/21 - Added template of document, Project Summary, Milestone
 
 Version 0.01 - 04/19/21 - Added Team Members' Contribution
 
+Version 0.02 - 04/19/21 - Added Team Member's Contribution
+
 # Project Summary
 
 Our product called “Overtake” is an original game developed in the Unity game engine and playable using a modern web browser. Overtake is a single-player 2D platform game aimed at people wanting to take a short break, and features simple controls and interface. Users will go through the game level by running and jumping, and when the game is over their score will be saved. Users of the game will be able to compare their scores with others by sharing their usernames with each other and checking the high score leaderboard. The game can be marketed through users who wish to share their score using social media, and having them invite others to beat their score. During the times of Covid-19, the game is also a way for people to connect while maintaining social distancing.
@@ -329,6 +331,10 @@ g)  Team lead ensured that all team members read the final M1 and agree/understa
     * Scrum Master
 * Ruth Betancourt
     * Documentation
+* Brandon Basdeo
+    * Documentation
+    * Worked on PowerPoint slides and voice recordings for presentation
+    * Game development 
 
 ### GitHub Team Development Branch
 
