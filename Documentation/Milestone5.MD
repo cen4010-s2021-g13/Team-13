@@ -325,6 +325,7 @@ g)  Team lead ensured that all team members read the final M1 and agree/understa
     * Worked on PowerPoint slides and voice recordings for presentation
     * Send detailed meeting notes of daily scrum meetings to team members
     * Allcated tasks among team members
+    * Set up daily scrum meetings
     * Scrum Master
 * Ruth Betancourt
     * Documentation
