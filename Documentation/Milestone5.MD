@@ -1,7 +1,3 @@
-[Team Member Contributions.pdf](https://github.com/cen4010-s2021-g13/Team-13/files/6332688/Team.Member.Contributions.pdf)
-[Team Member Contributions.pdf](https://github.com/cen4010-s2021-g13/Team-13/files/6332698/Team.Member.Contributions.pdf)
-[Team Member Contributions.pdf](https://github.com/cen4010-s2021-g13/Team-13/files/6332700/Team.Member.Contributions.pdf)
-[T13- Team Members Contribution.docx](https://github.com/cen4010-s2021-g13/Team-13/files/6332702/T13-.Team.Members.Contribution.docx)
 # Cover Page
 
 ## CEN 4010 Principles of Software Engineering Spring 2021
@@ -18,6 +14,8 @@
 ## Project URL: https://cen4010-s2021-g13.github.io/
 ## History Table
 Version 0.00 - 04/18/21 - Added template of document, Project Summary, Milestone Documents, Post-Project Analysis
+
+Version 0.01 - 04/19/21 - Added Team Members' Contribution
 
 # Project Summary
 
@@ -306,6 +304,42 @@ g)  Team lead ensured that all team members read the final M1 and agree/understa
 ## Google Analytics Plot for Your Website
 
 ## Team Members' Contribution
+
+### Team Members' Contribution to the Project
+
+|         Name        | Points |
+|:-------------------:|:------:|
+| Rosalba Monterrosas |  50/3  |
+|    Brandon Basdeo   |  50/3  |
+|   Ruth Betancourt   |  50/3  |
+|  Michael Hollinger  |  50/3  |
+|     Lionel Munoz    |  50/3  |
+| Luiz Zullino Junior |  50/3  |
+
+### Team Members' Contribution to Teamwork
+
+* Rosalba Monterrosas
+    * Set up GitHub organization and team repo
+    * Set up the templates for the Milestone documents
+    * Documentation
+    * Worked on PowerPoint slides and voice recordings for presentation
+    * Send detailed meeting notes of daily scrum meetings to team members
+    * Allcated tasks among team members
+    * Scrum Master
+* Ruth Betancourt
+    * Documentation
+
+### GitHub Team Development Branch
+
+|         Name        | Number of Submissions |
+|:-------------------:|:---------------------:|
+| Rosalba Monterrosas |           38          |
+|    Brandon Basdeo   |           7           |
+|   Ruth Betancourt   |           2           |
+|  Michael Hollinger  |           6           |
+|     Lionel Munoz    |           4           |
+| Luiz Zullino Junior |           19          |
+
 
 ## Post-Project Analysis
 
