@@ -35,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        sprite.color = ColorPicker.playerColor;
+
         if (OnDeath == null)
             OnDeath = new UnityEvent();
 
@@ -44,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //Get Trasnform and updated checkpoint position
-        playerTransform = this.GetComponent<Transform>();
+        playerTransform = GetComponent<Transform>();
         checkpoint = playerTransform.position;
         timer = 0;
     }
@@ -129,7 +132,6 @@ public class PlayerMovement : MonoBehaviour
             rayColor = Color.red;
         }
         Debug.DrawRay(circleCollider.bounds.center, Vector2.down * (circleCollider.radius + extraHeight));
-        //Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
     }
     void FixedUpdate()
