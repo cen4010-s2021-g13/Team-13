@@ -1,3 +1,7 @@
+[Team Member Contributions.pdf](https://github.com/cen4010-s2021-g13/Team-13/files/6332688/Team.Member.Contributions.pdf)
+[Team Member Contributions.pdf](https://github.com/cen4010-s2021-g13/Team-13/files/6332698/Team.Member.Contributions.pdf)
+[Team Member Contributions.pdf](https://github.com/cen4010-s2021-g13/Team-13/files/6332700/Team.Member.Contributions.pdf)
+[T13- Team Members Contribution.docx](https://github.com/cen4010-s2021-g13/Team-13/files/6332702/T13-.Team.Members.Contribution.docx)
 # Cover Page
 
 ## CEN 4010 Principles of Software Engineering Spring 2021
