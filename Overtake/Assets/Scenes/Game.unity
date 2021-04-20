@@ -1062,6 +1062,7 @@ GameObject:
   - component: {fileID: 543420004}
   - component: {fileID: 543420003}
   - component: {fileID: 543420005}
+  - component: {fileID: 543420006}
   m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
@@ -2162,6 +2163,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: -0.28}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &543420006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543420001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fb6950ddc1daf4fa4e82d520a0da28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &658612128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,6 +3622,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1336576375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336576377}
+  - component: {fileID: 1336576376}
+  m_Layer: 0
+  m_Name: FirebaseManager
+  m_TagString: FirebaseManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1336576376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336576375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fb6950ddc1daf4fa4e82d520a0da28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1336576377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336576375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26418805, y: -0.07036529, z: -33.63153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393548954
 GameObject:

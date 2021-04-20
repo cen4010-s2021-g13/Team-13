@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool isDead = false;
     bool isFinished = false;
-    
+    bool isPaused = false;
+
     Vector3 checkpoint;
     Transform playerTransform;
 
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        sprite.color = ColorPicker.playerColor;
+        sprite.color = StaticVars.playerColor;
 
         if (OnDeath == null)
             OnDeath = new UnityEvent();
@@ -92,7 +93,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isDead)
         {
-            if (!isFinished)
+
+            if (!isFinished && !isPaused)
             {
                 horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
