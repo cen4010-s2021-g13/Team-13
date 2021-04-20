@@ -12,6 +12,6 @@ public class MainMenu : MonoBehaviour
     }
     public void UpdateUser()
     {
-        textUI.SetText(StaticVars.currentUsername);
+        textUI.SetText(StaticVars.currentNickname);
     }
 }
