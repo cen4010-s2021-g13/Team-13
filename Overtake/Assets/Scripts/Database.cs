@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography; 
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
@@ -50,9 +51,9 @@ public class Database : MonoBehaviour
             warningLogin.SetText("Password cannot be empty");
             return;
         }
-
+        
         //Call async function to login
-        StartCoroutine(Login());
+        StartCoroutine(LoginFirebase());
     }
 
     //OnRegister when signup button is clicked
@@ -63,12 +64,6 @@ public class Database : MonoBehaviour
         {
             Debug.LogError("Email cannot be empty");
             warningSignUp.SetText("Email cannot be empty");
-            return;
-        }
-        if (!IsValidEmail(emailRegister.text))
-        {
-            Debug.LogError("Invalid email format");
-            warningSignUp.SetText("Invalid email format");
             return;
         }
         if (usernameRegister.text == "")
@@ -97,14 +92,16 @@ public class Database : MonoBehaviour
         }
 
         //Call async registration
-        StartCoroutine(Register());
+        StartCoroutine(RegisterFirebase());
     }
 
     //OnSignOut button clicked
     public void OnSignOut()
     {
-        StaticVars.currentUsername = "";
+        StaticVars.currentNickname = "";
         StaticVars.currentUserId = "";
+        StaticVars.currentHighscore = "";
+
         RefreshMenu();
     }
 
@@ -121,109 +118,162 @@ public class Database : MonoBehaviour
         warningSignUp.SetText("");
     }
 
-    //Check email field
-    bool IsValidEmail(string email)
-    {
-        try
-        {
-            var addr = new System.Net.Mail.MailAddress(email);
-            return addr.Address == email;
-        }
-        catch
-        {
-            return false;
-        }
-    }
-
-    //Check if login matches database
-    void CheckLogin(JObject jsonObj)
-    {
-        foreach (var child in jsonObj.Children().Children())
-        {
-            if (username.text == child["username"].ToString())
-            {
-                if (password.text == child["password"].ToString())
-                {
-                    StaticVars.currentUsername = child["username"].ToString();
-                    //Debug.Log(StaticVars.currentUsername);
-                    StaticVars.currentUserId = child.Parent.Path.ToString();
-                    //Debug.Log(StaticVars.currentUserId);
-                    OnLoginSuccess.Invoke();
-                    return;
-                }
-                else
-                {
-                    Debug.LogError("Incorrect password");
-                    warningLogin.SetText("Incorrect password");
-                    return;
-                }
-            }
-        }
-        Debug.LogError("Username not found");
-        warningLogin.SetText("Username not found");
-    }
-
-    //Async login
-    IEnumerator Login()
-    {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users.json", "GET");
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        yield return request.SendWebRequest();
-
-        JObject jsonObj = JObject.Parse(request.downloadHandler.text);
-
-        CheckLogin(jsonObj);
-    }
-  
-    //Async Registering
-    IEnumerator Register()
-    {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users.json", "GET");
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        yield return request.SendWebRequest();
-
-        JObject jsonObj = JObject.Parse(request.downloadHandler.text);
-
-        //Checks for duplicity
-        CheckDuplicate(jsonObj);
-    }
-
-    void CheckDuplicate(JObject jsonObj)
-    {
-        foreach (var child in jsonObj.Children().Children())
-        {
-            if (usernameRegister.text == child["username"].ToString())
-            {
-                Debug.LogError("Username already exists");
-                warningSignUp.SetText("Username already exists");
-                return;
-            }
-            if (emailRegister.text == child["email"].ToString())
-            {
-                Debug.LogError("Email already registered");
-                warningSignUp.SetText("Email already registered");
-                return;
-            }
-        }
-
-        //Call another async function to post to database
-        StartCoroutine(FinishRegistration());
-    }
-
-    IEnumerator FinishRegistration()
+    //Async login with Firebase Authentication
+    IEnumerator LoginFirebase()
     {
         //JSON object created with necessary fields
-        JObject jsonObj = new JObject(new JProperty("email", emailRegister.text), new JProperty("username", usernameRegister.text), new JProperty("password", passwordRegister.text), new JProperty("highscore", 0));
+        JObject jsonObj = new JObject(new JProperty("email", username.text), new JProperty("password", password.text), new JProperty("returnSecureToken", true));
 
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users.json", "POST");
+        UnityWebRequest request = new UnityWebRequest("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" + StaticVars.APIKEY, "POST");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
 
-        OnRegistrationSuccess.Invoke();
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+
+            StaticVars.currentUserId = responsenObj["localId"].ToString();
+            StartCoroutine(GetUserInfo(StaticVars.currentUserId));
+        }
+        else if (request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+            string errorMessage = responsenObj["error"]["message"].ToString();
+            Debug.Log(errorMessage);
+            if (errorMessage.Contains("INVALID_EMAIL"))
+            {
+                warningLogin.SetText("Invalid email");
+            }
+            else if (errorMessage.Contains("EMAIL_NOT_FOUND"))
+            {
+                warningLogin.SetText("Email not found");
+            }
+            else if (errorMessage.Contains("INVALID_PASSWORD"))
+            {
+                warningLogin.SetText("Invalid password");
+            }
+            else if (errorMessage.Contains("USER_DISABLED"))
+            {
+                warningLogin.SetText("User Disabled");
+            }
+            else if (errorMessage.Contains("TOO_MANY_ATTEMPTS_TRY_LATER"))
+            {
+                warningLogin.SetText("Too many Attempts");
+            }
+            else
+            {
+                warningLogin.SetText(errorMessage);
+            }
+            Debug.Log(request.error);
+        }
+        else
+        {
+            warningLogin.SetText("Networking Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async function to get userinfo from database
+    IEnumerator GetUserInfo(string userId)
+    {
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json", "GET");
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+
+            StaticVars.currentNickname = responsenObj["nickname"].ToString();
+            StaticVars.currentHighscore = responsenObj["highscore"].ToString();
+            OnLoginSuccess.Invoke();
+        }
+        else
+        {
+            warningLogin.SetText("Database Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async register new user with Firebase Authentication
+    IEnumerator RegisterFirebase()
+    {
+        //JSON object created with necessary fields
+        JObject jsonObj = new JObject(new JProperty("email", emailRegister.text), new JProperty("password", passwordRegister.text), new JProperty("returnSecureToken", true));
+
+        UnityWebRequest request = new UnityWebRequest("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" + StaticVars.APIKEY, "POST");
+        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+
+            StartCoroutine(SetNewUserInfo(responsenObj["localId"].ToString()));
+        }
+        else if (request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+            string errorMessage = responsenObj["error"]["message"].ToString();
+            Debug.Log(errorMessage);
+            if (errorMessage.Contains("INVALID_EMAIL"))
+            {
+                warningSignUp.SetText("Invalid email");
+            }
+            else if (errorMessage.Contains("EMAIL_EXISTS"))
+            {
+                warningSignUp.SetText("Email already registered");
+            }
+            else if (errorMessage.Contains("INVALID_PASSWORD"))
+            {
+                warningSignUp.SetText("Invalid password");
+            }
+            else if (errorMessage.Contains("TOO_MANY_ATTEMPTS_TRY_LATER"))
+            {
+                warningSignUp.SetText("Too many Attempts");
+            }
+            else
+            {
+                warningSignUp.SetText(errorMessage);
+            }
+            Debug.Log(request.error);
+        }
+        else
+        {
+            warningSignUp.SetText("Networking Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async
+    IEnumerator SetNewUserInfo(string userId)
+    {
+        //JSON object created with necessary fields
+        JObject jsonObj = new JObject(new JProperty("nickname", usernameRegister.text), new JProperty("highscore", "0"));
+
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json", "PUT");
+        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            OnRegistrationSuccess.Invoke();
+        }
+        else
+        {
+            warningLogin.SetText("Database Error");
+            Debug.Log(request.error);
+        }
     }
 }
