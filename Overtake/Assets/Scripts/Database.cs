@@ -33,6 +33,10 @@ public class Database : MonoBehaviour
     public TMP_Text warningNicknameChange;
     public TMP_Text registrationMessage;
 
+    [Header("Leaderboard")]
+    public int limitLeaderboard;
+    public TMP_Text leaderboard;
+
     //Events
     public UnityEvent OnLoginSuccess;
     public UnityEvent OnRegistrationSuccess;
@@ -123,7 +127,7 @@ public class Database : MonoBehaviour
     //Get leaderboard
     public void OnGetLeaderboard()
     {
-        StartCoroutine(GetLeaderboard());
+        StartCoroutine(GetUsers());
     }
 
     //Reset password clicked
@@ -239,7 +243,7 @@ public class Database : MonoBehaviour
     //Async function to get userinfo from database
     IEnumerator GetHighScore()
     {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/highscore.json", "GET");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/highscore.json?auth=" + StaticVars.SECRET, "GET");
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
@@ -260,7 +264,7 @@ public class Database : MonoBehaviour
     //Async function to get userinfo from database
     IEnumerator GetUserInfo(string userId)
     {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json", "GET");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json?auth=" + StaticVars.SECRET, "GET");
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
@@ -337,9 +341,9 @@ public class Database : MonoBehaviour
     IEnumerator SetNewUserInfo(string userId)
     {
         //JSON object created with necessary fields
-        JObject jsonObj = new JObject(new JProperty("nickname", nicknameRegister.text), new JProperty("highscore", "0"));
+        JObject jsonObj = new JObject(new JProperty("nickname", nicknameRegister.text), new JProperty("personalBest", "0"));
 
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json", "PUT");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json?auth=" + StaticVars.SECRET, "PUT");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
@@ -408,7 +412,7 @@ public class Database : MonoBehaviour
     //Async function to change nickname in database
     IEnumerator ChangeNickname(string userId)
     {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + "/nickname.json", "PUT");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + "/nickname.json?auth=" + StaticVars.SECRET, "PUT");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes("\"" + nicknameChange.text + "\"");
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
@@ -429,10 +433,10 @@ public class Database : MonoBehaviour
         }
     }
 
-    //Async function to get all leaderboard from database
-    IEnumerator GetLeaderboard()
+    //Async function to get all users from database
+    IEnumerator GetUsers()
     {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/leaderboard.json", "GET");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users.json?auth=" + StaticVars.SECRET, "GET");
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
@@ -441,20 +445,51 @@ public class Database : MonoBehaviour
         {
             JObject responsenObj = JObject.Parse(request.downloadHandler.text);
 
-            Dictionary<string, float> scoresDict = new Dictionary<string, float>();
-            foreach (var child in responsenObj.Children().Children())
+            Dictionary<string, string> usersDict = new Dictionary<string, string>();
+            foreach (var child in responsenObj.Children())
             {
-                scoresDict.Add(child["userId"].ToString(), float.Parse(child["score"].ToString()));
-                Debug.Log(child["score"].ToString());
+                usersDict.Add(child.Path, child.First["nickname"].ToString());
+            }
+            StartCoroutine(GetLeaderboard(usersDict));
+        }
+        else
+        {
+            warningLogin.SetText("Database Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async function to get all leaderboard from database
+    IEnumerator GetLeaderboard(Dictionary<string, string> usersDict)
+    {
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/leaderboard.json?orderBy=\"score\"&limitToLast=" + limitLeaderboard + "&auth=" + StaticVars.SECRET, "GET");
+        //Debug.Log(request.url);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+
+            Debug.Log(responsenObj.ToString());
+            Dictionary<string, float> scoresDict = new Dictionary<string, float>();
+            foreach (var child in responsenObj.Children())
+            {
+                scoresDict.Add(child.Path + "," + child.First["userId"], float.Parse(child.First["score"].ToString()));
             }
 
-            var orderedScores = from pair in scoresDict orderby pair.Value ascending select pair;
-
+            var orderedScores = from pair in scoresDict orderby pair.Value descending select pair;
+            
+            int rank = 1;
+            string table = "";
             foreach (var score in orderedScores)
             {
-                Debug.Log("userId: " + score.Key);
-                Debug.Log("score: " + score.Value);
+                //Debug.Log(rank + ") "+ usersDict[score.Key.Split(',')[1]] + "=" + score.Value);
+                table += rank + ") " + usersDict[score.Key.Split(',')[1]] + "=" + score.Value + "\n";
+                rank++;
             }
+            leaderboard.SetText(table);
         }
         else
         {
