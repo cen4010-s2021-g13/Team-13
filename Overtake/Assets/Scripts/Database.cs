@@ -1,32 +1,45 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography; 
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using System.Linq;
 using Newtonsoft.Json.Linq;
 using UnityEngine.Events;
 
 public class Database : MonoBehaviour
 {
     [Header("Login")]
-    public TMP_InputField username;
+    public TMP_InputField email;
     public TMP_InputField password;
 
     [Header("Register")]
+    public TMP_InputField nicknameRegister;
     public TMP_InputField emailRegister;
-    public TMP_InputField usernameRegister;
     public TMP_InputField passwordRegister;
     public TMP_InputField passwordConfirmationRegister;
+
+    [Header("Reset Password")]
+    public TMP_InputField emailReset;
+
+    [Header("Change Nickname")]
+    public TMP_InputField nicknameChange;
 
     [Header("Warning")]
     public TMP_Text warningLogin;
     public TMP_Text warningSignUp;
+    public TMP_Text warningReset;
+    public TMP_Text warningNicknameChange;
+    public TMP_Text registrationMessage;
 
     //Events
     public UnityEvent OnLoginSuccess;
     public UnityEvent OnRegistrationSuccess;
+    public UnityEvent OnResetPasswordSuccess;
+    public UnityEvent OnUserAlreadyLoggedIn;
+    public UnityEvent OnChangeNicknameSuccess;
+
     void Awake()
     {
         if (OnLoginSuccess == null)
@@ -34,12 +47,24 @@ public class Database : MonoBehaviour
 
         if (OnRegistrationSuccess == null)
             OnRegistrationSuccess = new UnityEvent();
+
+        if (OnResetPasswordSuccess == null)
+            OnResetPasswordSuccess = new UnityEvent();
+
+        if (OnUserAlreadyLoggedIn == null)
+            OnUserAlreadyLoggedIn = new UnityEvent();
+
+        if (OnChangeNicknameSuccess == null)
+            OnChangeNicknameSuccess = new UnityEvent();
+
+        if (StaticVars.currentUserId != "")
+            OnUserAlreadyLoggedIn.Invoke();
     }
     //OnLogin button click
     public void OnLogin()
     {
         //Check username and password fields
-        if (username.text == "")
+        if (email.text == "")
         {
             Debug.LogError("Username cannot be empty");
             warningLogin.SetText("Username cannot be empty");
@@ -66,10 +91,10 @@ public class Database : MonoBehaviour
             warningSignUp.SetText("Email cannot be empty");
             return;
         }
-        if (usernameRegister.text == "")
+        if (nicknameRegister.text == "")
         {
-            Debug.LogError("Username cannot be empty");
-            warningSignUp.SetText("Username cannot be empty");
+            Debug.LogError("Nickname cannot be empty");
+            warningSignUp.SetText("Nickname cannot be empty");
             return;
         }
         if (passwordRegister.text == "")
@@ -95,34 +120,68 @@ public class Database : MonoBehaviour
         StartCoroutine(RegisterFirebase());
     }
 
+    //Get leaderboard
+    public void OnGetLeaderboard()
+    {
+        StartCoroutine(GetLeaderboard());
+    }
+
+    //Reset password clicked
+    public void OnResetPassword()
+    {
+        //Check email
+        if (emailReset.text == "")
+        {
+            Debug.LogError("Email cannot be empty");
+            warningSignUp.SetText("Email cannot be empty");
+            return;
+        }
+        StartCoroutine(ResetPasswordFirebase());
+    }
+
     //OnSignOut button clicked
     public void OnSignOut()
     {
         StaticVars.currentNickname = "";
         StaticVars.currentUserId = "";
-        StaticVars.currentHighscore = "";
+        StaticVars.currentHighScore = "";
+        StaticVars.currentPersonalBest = "";
 
         RefreshMenu();
     }
 
-    //Refresh menu
-    void RefreshMenu()
+    //OnChangeNickname button clicked
+    public void OnChangeNickname()
     {
-        username.text = "";
+        if (nicknameChange.text == "")
+        {
+            Debug.LogError("Nickname cannot be empty");
+            warningNicknameChange.SetText("Nickname cannot be empty");
+            return;
+        }
+        StartCoroutine(ChangeNickname(StaticVars.currentUserId));
+    }
+    //Refresh menu
+    public void RefreshMenu()
+    {
+        email.text = "";
         password.text = "";
-        usernameRegister.text = "";
+        nicknameRegister.text = "";
         emailRegister.text = "";
         passwordRegister.text = "";
         passwordConfirmationRegister.text = "";
+        emailReset.text = "";
         warningLogin.SetText("");
         warningSignUp.SetText("");
+        warningReset.SetText("");
+        registrationMessage.SetText("");
     }
 
     //Async login with Firebase Authentication
     IEnumerator LoginFirebase()
     {
         //JSON object created with necessary fields
-        JObject jsonObj = new JObject(new JProperty("email", username.text), new JProperty("password", password.text), new JProperty("returnSecureToken", true));
+        JObject jsonObj = new JObject(new JProperty("email", email.text), new JProperty("password", password.text), new JProperty("returnSecureToken", true));
 
         UnityWebRequest request = new UnityWebRequest("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" + StaticVars.APIKEY, "POST");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
@@ -136,6 +195,7 @@ public class Database : MonoBehaviour
             JObject responsenObj = JObject.Parse(request.downloadHandler.text);
 
             StaticVars.currentUserId = responsenObj["localId"].ToString();
+            StartCoroutine(GetHighScore());
             StartCoroutine(GetUserInfo(StaticVars.currentUserId));
         }
         else if (request.result == UnityWebRequest.Result.ProtocolError)
@@ -177,6 +237,27 @@ public class Database : MonoBehaviour
     }
 
     //Async function to get userinfo from database
+    IEnumerator GetHighScore()
+    {
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/highscore.json", "GET");
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+            Debug.Log(responsenObj["score"].ToString());
+            StaticVars.currentHighScore = responsenObj["score"].ToString();
+        }
+        else
+        {
+            warningLogin.SetText("Database Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async function to get userinfo from database
     IEnumerator GetUserInfo(string userId)
     {
         UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json", "GET");
@@ -189,7 +270,7 @@ public class Database : MonoBehaviour
             JObject responsenObj = JObject.Parse(request.downloadHandler.text);
 
             StaticVars.currentNickname = responsenObj["nickname"].ToString();
-            StaticVars.currentHighscore = responsenObj["highscore"].ToString();
+            StaticVars.currentPersonalBest = responsenObj["personalBest"].ToString();
             OnLoginSuccess.Invoke();
         }
         else
@@ -256,7 +337,7 @@ public class Database : MonoBehaviour
     IEnumerator SetNewUserInfo(string userId)
     {
         //JSON object created with necessary fields
-        JObject jsonObj = new JObject(new JProperty("nickname", usernameRegister.text), new JProperty("highscore", "0"));
+        JObject jsonObj = new JObject(new JProperty("nickname", nicknameRegister.text), new JProperty("highscore", "0"));
 
         UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + ".json", "PUT");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
@@ -269,6 +350,111 @@ public class Database : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             OnRegistrationSuccess.Invoke();
+            RefreshMenu();
+            registrationMessage.SetText("Account created!");
+        }
+        else
+        {
+            warningLogin.SetText("Database Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async
+    IEnumerator ResetPasswordFirebase()
+    {
+        //JSON object created with necessary fields
+        JObject jsonObj = new JObject(new JProperty("email", emailReset.text), new JProperty("requestType", "PASSWORD_RESET"));
+
+        UnityWebRequest request = new UnityWebRequest("https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=" + StaticVars.APIKEY, "POST");
+        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            OnResetPasswordSuccess.Invoke();
+            RefreshMenu();
+            registrationMessage.SetText("Reset link sent");
+        }
+        else if (request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+            string errorMessage = responsenObj["error"]["message"].ToString();
+            Debug.Log(errorMessage);
+            if (errorMessage.Contains("INVALID_EMAIL"))
+            {
+                warningReset.SetText("Invalid email");
+            }
+            else if (errorMessage.Contains("EMAIL_NOT_FOUND"))
+            {
+                warningReset.SetText("Email not found");
+            }
+            else
+            {
+                warningReset.SetText(errorMessage);
+            }
+            Debug.Log(request.error);
+        }
+        else
+        {
+            warningSignUp.SetText("Networking Error");
+            Debug.Log(request.error);
+        }
+    }
+
+    //Async function to change nickname in database
+    IEnumerator ChangeNickname(string userId)
+    {
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + "/nickname.json", "PUT");
+        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes("\"" + nicknameChange.text + "\"");
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            StaticVars.currentNickname = nicknameChange.text;
+            OnChangeNicknameSuccess.Invoke();
+        }
+        else
+        {
+            warningNicknameChange.SetText("Database Error");
+            Debug.Log(request.error);
+            Debug.Log(request.downloadHandler.text);
+        }
+    }
+
+    //Async function to get all leaderboard from database
+    IEnumerator GetLeaderboard()
+    {
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/leaderboard.json", "GET");
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            JObject responsenObj = JObject.Parse(request.downloadHandler.text);
+
+            Dictionary<string, float> scoresDict = new Dictionary<string, float>();
+            foreach (var child in responsenObj.Children().Children())
+            {
+                scoresDict.Add(child["userId"].ToString(), float.Parse(child["score"].ToString()));
+                Debug.Log(child["score"].ToString());
+            }
+
+            var orderedScores = from pair in scoresDict orderby pair.Value ascending select pair;
+
+            foreach (var score in orderedScores)
+            {
+                Debug.Log("userId: " + score.Key);
+                Debug.Log("score: " + score.Value);
+            }
         }
         else
         {
