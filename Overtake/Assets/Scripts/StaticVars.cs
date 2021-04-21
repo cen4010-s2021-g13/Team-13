@@ -11,5 +11,6 @@ public class StaticVars : MonoBehaviour
     public static Color playerColor = new Color(1f, 1f, 1f);
     public static string currentUserId = "";
     public static string currentNickname = "";
-    public static string currentHighscore = "";
+    public static string currentHighScore = "";
+    public static string currentPersonalBest = "";
 }

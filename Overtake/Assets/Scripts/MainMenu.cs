@@ -5,13 +5,12 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    TMP_Text textUI;
-    void Awake()
-    {
-        textUI = GetComponent<TMP_Text>();
-    }
+    public TMP_Text nicknameUI;
+    public TMP_Text personalBestUI;
+
     public void UpdateUser()
     {
-        textUI.SetText(StaticVars.currentNickname);
+        nicknameUI.SetText(StaticVars.currentNickname);
+        personalBestUI.SetText("Personal Best: " + StaticVars.currentPersonalBest);
     }
 }

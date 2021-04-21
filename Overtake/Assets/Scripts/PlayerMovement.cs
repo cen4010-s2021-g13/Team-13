@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 40f;
     float horizontalMove = 0f;
 
+    public GameObject firebaseManager;
+
     bool jump = false;
     bool isDead = false;
     bool isFinished = false;
@@ -31,9 +33,10 @@ public class PlayerMovement : MonoBehaviour
 
     public SceneLoader sceneLoader;
     public float deathBoundary;
+
     public UnityEvent OnDeath;
     public UnityEvent OnFinish;
-
+    public UnityEvent OnPause;
     void Awake()
     {
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
@@ -44,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (OnFinish == null)
             OnFinish = new UnityEvent();
+
+        if (OnPause == null)
+            OnPause = new UnityEvent();
     }
     void Start()
     {
@@ -70,8 +76,8 @@ public class PlayerMovement : MonoBehaviour
 
             collision.gameObject.SetActive(false);
             isFinished = true;
-            scoreObj.GetComponent<TextMeshProUGUI>().text = "Score = " + (maxScore - (Mathf.Round(timer * 100)/100f * scoreMultiplier)).ToString();
-            OnFinish.Invoke();
+
+            Finish();
         }
 
         //Check collision with checkpoint
@@ -105,6 +111,14 @@ public class PlayerMovement : MonoBehaviour
                 {
                     jump = true;
                     animator.SetBool("isJumping", true);
+                }
+
+                //Pause
+                if (Input.GetButtonDown("Pause"))
+                {
+                    isPaused = true;
+                    Time.timeScale = 0;
+                    OnPause.Invoke();
                 }
 
                 timer += Time.deltaTime;
@@ -149,5 +163,20 @@ public class PlayerMovement : MonoBehaviour
     {
         playerTransform.position = checkpoint;
         isDead = false;
+    }
+    //Unpause the game
+    public void Unpause()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
+    }
+    void Finish()
+    {
+        //Calculate final score
+        float finalScore = (maxScore - (Mathf.Round(timer * 1000) / 1000f * scoreMultiplier));
+        scoreObj.GetComponent<TextMeshProUGUI>().text = "Score = " + finalScore.ToString();
+        
+        firebaseManager.GetComponent<InGameDatabase>().SaveScore(finalScore);
+        OnFinish.Invoke();
     }
 }
