@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     {
         textUI = GetComponent<TMP_Text>();
     }
-    public void UpdateUser()
+    public void Update()
     {
         textUI.SetText(StaticVars.currentNickname);
     }
