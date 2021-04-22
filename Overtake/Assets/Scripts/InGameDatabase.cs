@@ -37,7 +37,7 @@ public class InGameDatabase : MonoBehaviour
     //Async saving new personal highscore on database
     IEnumerator SavePersonalBestDataBase(string userId, string score)
     {
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + "/personalBest.json", "PUT");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/users/" + userId + "/personalBest.json?auth=" + StaticVars.SECRET, "PUT");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes("\"" + score + "\"");
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
@@ -58,7 +58,7 @@ public class InGameDatabase : MonoBehaviour
         //JSON object created with necessary fields
         JObject jsonObj = new JObject(new JProperty("userId", userId), new JProperty("score", score));
 
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/leaderboard/.json", "POST");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/leaderboard/.json?auth=" + StaticVars.SECRET, "POST");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
@@ -87,7 +87,7 @@ public class InGameDatabase : MonoBehaviour
         //JSON object created with necessary fields
         JObject jsonObj = new JObject(new JProperty("scoreId", scoreId), new JProperty("score", score));
 
-        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/highscore.json", "PUT");
+        UnityWebRequest request = new UnityWebRequest("https://overtake-904f8-default-rtdb.firebaseio.com/highscore.json?auth=" + StaticVars.SECRET, "PUT");
         byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonObj.ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
