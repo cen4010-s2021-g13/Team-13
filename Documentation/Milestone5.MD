@@ -304,6 +304,11 @@ g)  Team lead ensured that all team members read the final M1 and agree/understa
 ## Screenshots of Actual Final Product as Shown in the Demo
 
 ## Google Analytics Plot for Your Website
+Google Analytics is a tool used by companies and creators to measure and organize data surrounding their websites or applications. Google Analytics is setup to monitor many important metrics revolving around a successful website. Site traffic is displayed in real time and can be formatted to display data over days, weeks, months, or years. It is also possible to break down site traffic by geographic location. This is important because if you are a business looking to serve a specific area or even a world-wide market, it helps to know that your website is reaching those whom you are looking to work with. Another important feature of Google Analytics is how it monitors monetization and marketing. In the past, websites were generally used as a form of marketing for a business. With online stores, and bill payments becoming more popular, it is also important to keep track of how your website is helping you to make money. When it comes to marketing, Google Analytics has features to show how well your online/social media marketing campaigns are at bringing people to your website or application. This is useful when your company is first starting, and it is important that every penny you spend is being used efficiently.
+
+Team 13 has made use of Google Analytics by having it monitor the host website for our game Overtake. Our website does not have monetization features and we have not started any marketing campaigns, so these are not metrics that are currently useful. What our team is interested in is analyzing the traffic on our websites. It shows us information such as, how many people have come to the website over a period, from that group of people is it their first time on the website, and how long they are on it. This is crucial information for us because it lets us know if the news of our game is being spread, and if people are enjoying it. 
+
+Now because we do not have access to the html file of the website that is hosting our game, we are using Google Analytics through another Google platform known as Firebase. Our game was coded using Unity which does not support data base structures which is why we needed to implement Firebase in the first place. Among other things Firebase allowed us to be able to monitor the metrics of our site using Google Analytics.
 
 ## Team Members' Contribution
 
@@ -336,6 +341,10 @@ g)  Team lead ensured that all team members read the final M1 and agree/understa
     * Documentation
     * Worked on PowerPoint slides and voice recordings for presentation
     * Game development 
+* Lionel Munoz
+    * Documentation
+    * Created and Organized PowerPoint
+    * Setup Google Analytics account
 
 ### GitHub Team Development Branch
 
