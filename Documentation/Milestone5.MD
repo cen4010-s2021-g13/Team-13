@@ -310,6 +310,8 @@ Team 13 has made use of Google Analytics by having it monitor the host website f
 
 Now because we do not have access to the html file of the website that is hosting our game, we are using Google Analytics through another Google platform known as Firebase. Our game was coded using Unity which does not support data base structures which is why we needed to implement Firebase in the first place. Among other things Firebase allowed us to be able to monitor the metrics of our site using Google Analytics.
 
+![Google Analytics Plot](assets/Google_Analytic.png)
+
 ## Team Members' Contribution
 
 ### Team Members' Contribution to the Project
@@ -354,7 +356,7 @@ Now because we do not have access to the html file of the website that is hostin
 |    Brandon Basdeo   |           7           |
 |   Ruth Betancourt   |           2           |
 |  Michael Hollinger  |           6           |
-|     Lionel Munoz    |           4           |
+|     Lionel Munoz    |           7           |
 | Luiz Zullino Junior |           19          |
 
 
