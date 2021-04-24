@@ -336,7 +336,13 @@ Now because we do not have access to the html file of the website that is hostin
     * Allocated tasks among team members
     * Managed JIRA issues
     * Set up daily scrum meetings
-    * Scrum Master
+    * Scrum Master    
+* Luiz Zullino Junior
+    * Documentation
+    * Game development
+    * Database development and Integration
+    * Worked on PowerPoint slides and voice recordings for presentation
+    * Recorded gameplay demo and uploaded to youtube
 * Ruth Betancourt
     * Documentation
 * Brandon Basdeo
