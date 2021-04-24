@@ -352,12 +352,12 @@ Now because we do not have access to the html file of the website that is hostin
 
 |         Name        | Number of Submissions |
 |:-------------------:|:---------------------:|
-| Rosalba Monterrosas |           38          |
-|    Brandon Basdeo   |           7           |
+| Rosalba Monterrosas |           44          |
+|    Brandon Basdeo   |           9           |
 |   Ruth Betancourt   |           2           |
 |  Michael Hollinger  |           6           |
 |     Lionel Munoz    |           7           |
-| Luiz Zullino Junior |           19          |
+| Luiz Zullino Junior |           24          |
 
 
 ## Post-Project Analysis
