@@ -35,7 +35,10 @@ public class Database : MonoBehaviour
 
     [Header("Leaderboard")]
     public int limitLeaderboard;
-    public TMP_Text leaderboard;
+    public GameObject leaderboard;
+    public GameObject lightRow;
+    public GameObject darkRow;
+
 
     //Events
     public UnityEvent OnLoginSuccess;
@@ -472,7 +475,7 @@ public class Database : MonoBehaviour
         {
             JObject responsenObj = JObject.Parse(request.downloadHandler.text);
 
-            Debug.Log(responsenObj.ToString());
+            //Debug.Log(responsenObj.ToString());
             Dictionary<string, float> scoresDict = new Dictionary<string, float>();
             foreach (var child in responsenObj.Children())
             {
@@ -482,14 +485,25 @@ public class Database : MonoBehaviour
             var orderedScores = from pair in scoresDict orderby pair.Value descending select pair;
             
             int rank = 1;
-            string table = "";
+            GameObject newRow;
             foreach (var score in orderedScores)
             {
+                if (rank % 2 != 0)
+                {
+                    newRow = Instantiate(lightRow, new Vector3(0,80 - (rank * 40),0), Quaternion.identity);
+                    
+                }
+                else
+                {
+                    newRow = Instantiate(darkRow, new Vector3(0,80 - (rank * 40),0), Quaternion.identity);
+                }
+                newRow.transform.SetParent(leaderboard.transform, false);
+                newRow.transform.GetChild(0).GetComponent<TMP_Text>().SetText(rank.ToString());
+                newRow.transform.GetChild(1).GetComponent<TMP_Text>().SetText(usersDict[score.Key.Split(',')[1]]);
+                newRow.transform.GetChild(2).GetComponent<TMP_Text>().SetText(score.Value.ToString());
                 //Debug.Log(rank + ") "+ usersDict[score.Key.Split(',')[1]] + "=" + score.Value);
-                table += rank + ") " + usersDict[score.Key.Split(',')[1]] + "=" + score.Value + "\n";
                 rank++;
             }
-            leaderboard.SetText(table);
         }
         else
         {
