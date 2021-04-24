@@ -26,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject timerObj;
     public GameObject scoreObj;
+    public GameObject countdownObj;
     float timer;
+    float countdown = 3f;
 
     int scoreMultiplier = 10;
     int maxScore = 1000;
@@ -97,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             Respawn();
         }
 
-        if (!isDead)
+        if (!isDead && countdown <= 0)
         {
 
             if (!isFinished && !isPaused)
@@ -132,7 +134,31 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        
+        if (countdown > 0)
+        {
+            countdown -= Time.deltaTime;
+            if (countdown > 2 && countdown <= 3)
+            {
+                //Debug.Log("READY");
+                countdownObj.GetComponent<TMP_Text>().SetText("READY");
+            }
+            else if (countdown > 1 && countdown <= 2)
+            {
+                //Debug.Log("SET");
+                countdownObj.GetComponent<TMP_Text>().SetText("SET");
+            }
+            else if (countdown > 0 && countdown <= 1)
+            {
+                //Debug.Log("GO");
+                countdownObj.GetComponent<TMP_Text>().SetText("GO!");
+            }
+            else if (countdown <= 0)
+            {
+                //Debug.Log("START");
+                countdownObj.transform.parent.gameObject.SetActive(false);
+                timerObj.transform.parent.gameObject.SetActive(true);
+            }
+        }
     }
     private bool IsGrounded()
     {
